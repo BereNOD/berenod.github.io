@@ -8,13 +8,40 @@
 /***/ }),
 /* 2 */,
 /* 3 */,
-/* 4 */
+/* 4 */,
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {(function ($) {
+  var Defaults = $.fn.select2.amd.require("select2/defaults");
+
+  $.extend(Defaults.defaults, {
+    searchInputPlaceholder: ""
+  });
+
+  var SearchDropdown = $.fn.select2.amd.require("select2/dropdown/search");
+
+  var _renderSearchDropdown = SearchDropdown.prototype.render;
+
+  SearchDropdown.prototype.render = function (decorated) {
+    // invoke parent method
+    var $rendered = _renderSearchDropdown.apply(this, Array.prototype.slice.apply(arguments));
+
+    this.$search.attr("placeholder", this.options.get("searchInputPlaceholder"));
+    return $rendered;
+  };
+})(__webpack_provided_window_dot_jQuery);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
+
+/***/ }),
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 5 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30,9 +57,20 @@ var owl_carousel = __webpack_require__(2);
 // EXTERNAL MODULE: ./node_modules/slick-carousel/slick/slick.js
 var slick = __webpack_require__(3);
 
-// EXTERNAL MODULE: ./src/styles.less
-var styles = __webpack_require__(4);
+// EXTERNAL MODULE: ./node_modules/select2/dist/js/select2.js
+var select2 = __webpack_require__(4);
 
+// EXTERNAL MODULE: ./src/components/select/pluginForSelect2.js
+var pluginForSelect2 = __webpack_require__(5);
+
+// EXTERNAL MODULE: ./node_modules/jquery-custom-select/jquery.custom-select.js
+var jquery_custom_select = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./src/styles.less
+var styles = __webpack_require__(7);
+
+// CONCATENATED MODULE: ./src/images/svg/logo.svg
+/* harmony default export */ var logo = (__webpack_require__.p + "svg/logo.svg?hash=c88df60977c15548fef84a88291bbf67");
 // CONCATENATED MODULE: ./src/images/svg/delimeter.svg
 /* harmony default export */ var delimeter = (__webpack_require__.p + "svg/delimeter.svg?hash=6c5cc81c03eb8c10e9cb04dc9878ea67");
 // CONCATENATED MODULE: ./src/images/svg/play.svg
@@ -71,6 +109,8 @@ var styles = __webpack_require__(4);
 /* harmony default export */ var newspapers = (__webpack_require__.p + "svg/newspapers.svg?hash=07a333bf393f493290df9ed5dff77a38");
 // CONCATENATED MODULE: ./src/images/svg/photos.svg
 /* harmony default export */ var photos = (__webpack_require__.p + "svg/photos.svg?hash=9ab3d2768419691d07b71456bdc54fee");
+// CONCATENATED MODULE: ./src/images/svg/burger.svg
+/* harmony default export */ var burger = (__webpack_require__.p + "svg/burger.svg?hash=ad640e4bea24d06175c25196a13df5b6");
 // CONCATENATED MODULE: ./src/images/svg/logoIcon.svg
 /* harmony default export */ var logoIcon = (__webpack_require__.p + "svg/logoIcon.svg?hash=7c6711d60c94b8675093c1729f01cdbb");
 // CONCATENATED MODULE: ./src/images/svg/facebook.svg
@@ -80,6 +120,8 @@ var styles = __webpack_require__(4);
 // CONCATENATED MODULE: ./src/images/svg/youtube.svg
 /* harmony default export */ var youtube = (__webpack_require__.p + "svg/youtube.svg?hash=630b28229c6799b13d2293de8f7a0e4f");
 // CONCATENATED MODULE: ./src/images/svg/index.js
+
+
 
 
 
@@ -128,6 +170,70 @@ jquery_default()(document).ready(function () {
     nextArrow: '<button type="button" class="slick-prev sliderItem__arrow sliderItem__arrow--next"><img src="svg/next.svg" alt="Next"></button>'
   });
 });
+// CONCATENATED MODULE: ./src/components/select/scripts.js
+
+jquery_default()(document).ready(function () {
+  jquery_default()(".select2Simple").select2({
+    placeholder: "Плейсхолдер",
+    allowClear: true,
+    minimumResultsForSearch: -1
+  });
+  jquery_default()(".select2Search").select2({
+    placeholder: "Выбрать автора",
+    allowClear: true,
+    searchInputPlaceholder: "Начните ввод"
+  });
+  jquery_default()(".custom-dropdown").not(".custom-dropdown2").customSelect({
+    search: false,
+    placeholder: "Плейсхолдер",
+    transition: 200
+  });
+  jquery_default()(".custom-dropdown2").customSelect({
+    search: true,
+    placeholder: "Выбрать автора",
+    transition: 200
+  });
+  jquery_default()(".custom-dropdown2").siblings(".custom-select").find("input").attr("placeholder", "Начните вводить");
+});
+// CONCATENATED MODULE: ./src/pages/home/sourcesTypes.js
+
+jquery_default()(document).ready(function () {// const
+  // $(".sourcesTypesInner").slick({
+  //   slidesToShow: 7,
+  //   centerMode: true,
+  //   variableWidth: true,
+  //   initialSlide: 4,
+  //   centerPadding: "50%",
+  //   responsive: [
+  //     // {
+  //     //   breakpoint: 1024,
+  //     //   settings: {
+  //     //     slidesToShow: 3,
+  //     //     slidesToScroll: 3,
+  //     //     infinite: true,
+  //     //     dots: true
+  //     //   }
+  //     // },
+  //     // {
+  //     //   breakpoint: 600,
+  //     //   settings: {
+  //     //     slidesToShow: 2,
+  //     //     slidesToScroll: 2
+  //     //   }
+  //     // },
+  //     // {
+  //     //   breakpoint: 480,
+  //     //   settings: {
+  //     //     slidesToShow: 1,
+  //     //     slidesToScroll: 1
+  //     //   }
+  //     // }
+  //     // You can unslick at a given breakpoint now by adding:
+  //     // settings: "unslick"
+  //     // instead of a settings object
+  //   ],
+  // });
+});
 // CONCATENATED MODULE: ./src/pages/home/index.pug
 /* harmony default export */ var home = (__webpack_require__.p + "index.html");
 // CONCATENATED MODULE: ./src/pages/ui.pug
@@ -142,5 +248,10 @@ jquery_default()(document).ready(function () {
 
 
 
+
+
+
+
+
 /***/ })
-],[[5,1,2]]]);
+],[[8,1,2]]]);

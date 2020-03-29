@@ -12,32 +12,39 @@
     <link rel="stylesheet" href="main.css?v=1.0.1"/>
   </head>
   <body>
-    <main>
-      <div class="topBannerWrapper">
-        <div class="topBanner container">
-          <div class="topBannerInfo">
-            <div class="topBannerInfo__title">Запорiзька Спадщина</div><img class="topBannerInfo__delimeter" src="svg/delimeter.svg" alt=""/>
-            <div class="topBannerInfo__subtitle">Оцифровані колекції архівних, бiблiотечних, музейних та приватних зібрань.</div>
-            <div class="topBannerInfo__search">
-              <div class="searchPanel">
-                <ul class="searchPanelGroup withLink">
-                  <li class="searchPanelGroupItem searchSource">
-                    <select>
-                      <option selected="selected" value="all">Все источники</option>
-                      <option value="1">Все источники</option>
-                      <option value="2">Все источники 2</option>
-                      <option value="3">Все источники 3</option>
-                    </select>
-                  </li>
-                  <li class="searchPanelGroupItem searchInput">
-                    <input placeholder="Поиск по коллекциям"/>
-                  </li>
-                  <li class="searchPanelGroupItem searchLink"><span>Расширенный поиск</span></li>
-                  <li class="searchPanelGroupItem searchBtn">
-                    <button class="btn btn__onlyIcon" data-color="primary"><img src="svg/searchIcon.svg" alt="Search"/></button>
-                  </li>
-                </ul>
-                <script>var x, i, j, selElmnt, a, b, c;
+    <div class="topBannerWrapper">
+      <header class="header">
+        <button class="headerBurger btn ripple"><img src="svg/burger.svg" alt="Home"/></button>
+        <button class="headerSignIn btn ripple" data-color="secondary">Увійти</button>
+        <div class="headerLanguages"><a class="headerLanguage btn link link__disabled ripple" href="#">ua</a><a class="headerLanguage btn link link__active ripple" href="#">ru</a></div>
+      </header>
+      <div class="topBanner container">
+        <div class="topBannerInfo">
+          <div class="topBannerInfo__logo"><img class="topBannerInfo__logoImage" src="svg/logo.svg" alt="Запорiзька Спадщина"/></div><img class="topBannerInfo__delimeter" src="svg/delimeter.svg" alt=""/>
+          <div class="topBannerInfo__subtitle">Оцифровані колекції архівних, бiблiотечних, музейних та приватних зібрань.</div>
+          <div class="topBannerVideo"><img class="topBannerVideo__video" src="jpg/photo.jpg" alt=""/>
+            <button class="topBannerVideo__play"><img class="topBannerVideo__video" src="svg/play.svg" alt=""/></button>
+          </div>
+          <div class="topBannerInfo__search">
+            <div class="searchPanel">
+              <ul class="searchPanelGroup withLink">
+                <li class="searchPanelGroupItem searchSource">
+                  <select>
+                    <option selected="selected" value="all">Все источники</option>
+                    <option value="1">Все источники</option>
+                    <option value="2">Все источники 2</option>
+                    <option value="3">Все источники 3</option>
+                  </select>
+                </li>
+                <li class="searchPanelGroupItem searchInput">
+                  <input placeholder="Поиск по коллекциям"/>
+                </li>
+                <li class="searchPanelGroupItem searchLink"><span>Расширенный поиск</span></li>
+                <li class="searchPanelGroupItem searchBtn">
+                  <button class="btn btn__onlyIcon" data-color="primary"><img src="svg/searchIcon.svg" alt="Search"/></button>
+                </li>
+              </ul>
+              <script>var x, i, j, selElmnt, a, b, c;
 /*look for any elements with the class "searchSource":*/
 x = document.getElementsByClassName("searchSource");
 for (i = 0; i < x.length; i++) {
@@ -113,15 +120,13 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
-                </script>
-              </div>
+              </script>
             </div>
-          </div>
-          <div class="topBannerVideo"><img class="topBannerVideo__video" src="jpg/photo.jpg" alt=""/>
-            <button class="topBannerVideo__play"><img class="topBannerVideo__video" src="svg/play.svg" alt=""/></button>
           </div>
         </div>
       </div>
+    </div>
+    <main>
       <div class="sliderWrapper sliderWrapper--collections">
         <div class="slider container">
           <h2 class="titleH2">Колекції</h2>
