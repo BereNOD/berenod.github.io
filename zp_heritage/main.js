@@ -71,7 +71,19 @@ var styles = __webpack_require__(4);
 /* harmony default export */ var newspapers = (__webpack_require__.p + "svg/newspapers.svg?hash=07a333bf393f493290df9ed5dff77a38");
 // CONCATENATED MODULE: ./src/images/svg/photos.svg
 /* harmony default export */ var photos = (__webpack_require__.p + "svg/photos.svg?hash=9ab3d2768419691d07b71456bdc54fee");
+// CONCATENATED MODULE: ./src/images/svg/logoIcon.svg
+/* harmony default export */ var logoIcon = (__webpack_require__.p + "svg/logoIcon.svg?hash=7c6711d60c94b8675093c1729f01cdbb");
+// CONCATENATED MODULE: ./src/images/svg/facebook.svg
+/* harmony default export */ var facebook = (__webpack_require__.p + "svg/facebook.svg?hash=b67feade0d2267b8784e564fde265134");
+// CONCATENATED MODULE: ./src/images/svg/instagram.svg
+/* harmony default export */ var instagram = (__webpack_require__.p + "svg/instagram.svg?hash=2e2fbf31ecd683171703bac0788504e9");
+// CONCATENATED MODULE: ./src/images/svg/youtube.svg
+/* harmony default export */ var youtube = (__webpack_require__.p + "svg/youtube.svg?hash=630b28229c6799b13d2293de8f7a0e4f");
 // CONCATENATED MODULE: ./src/images/svg/index.js
+
+
+
+
 
 
 
