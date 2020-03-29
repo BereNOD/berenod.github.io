@@ -14,26 +14,26 @@
   <body>
     <main>
       <div class="container"><br/>
-        <h1 style="text-align: center">Search Panel
-          <div class="searchPanel">
-            <ul class="searchPanelGroup withLink">
-              <li class="searchPanelGroupItem searchSource">
-                <select>
-                  <option selected="selected" value="all">Все источники</option>
-                  <option value="1">Все источники</option>
-                  <option value="2">Все источники 2</option>
-                  <option value="3">Все источники 3</option>
-                </select>
-              </li>
-              <li class="searchPanelGroupItem searchInput">
-                <input placeholder="Поиск по коллекциям"/>
-              </li>
-              <li class="searchPanelGroupItem searchLink"><span>Расширенный поиск</span></li>
-              <li class="searchPanelGroupItem searchBtn">
-                <button class="defaultBtn"><img class="topBannerInfo__delimeter" src="svg/searchIcon.svg" alt="Search"/></button>
-              </li>
-            </ul>
-            <script>var x, i, j, selElmnt, a, b, c;
+        <h1 style="text-align: center; font-weight: bold; font-size: 1.5rem">Search Panel</h1><br/>
+        <div class="searchPanel">
+          <ul class="searchPanelGroup withLink">
+            <li class="searchPanelGroupItem searchSource">
+              <select>
+                <option selected="selected" value="all">Все источники</option>
+                <option value="1">Все источники</option>
+                <option value="2">Все источники 2</option>
+                <option value="3">Все источники 3</option>
+              </select>
+            </li>
+            <li class="searchPanelGroupItem searchInput">
+              <input placeholder="Поиск по коллекциям"/>
+            </li>
+            <li class="searchPanelGroupItem searchLink"><span>Расширенный поиск</span></li>
+            <li class="searchPanelGroupItem searchBtn">
+              <button class="btn btn__onlyIcon" data-color="primary"><img src="svg/searchIcon.svg" alt="Search"/></button>
+            </li>
+          </ul>
+          <script>var x, i, j, selElmnt, a, b, c;
 /*look for any elements with the class "searchSource":*/
 x = document.getElementsByClassName("searchSource");
 for (i = 0; i < x.length; i++) {
@@ -109,9 +109,103 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
-            </script>
+          </script>
+        </div><br/>
+        <div style="display: flex; justify-content: space-between">
+          <!-- BUTTONS-->
+          <div style="width: 100%">
+            <h1 style="font-weight: bold; font-size: 1.5rem">Buttons</h1><br/>
+            <ul style="text-align: left">
+              <li style="margin-bottom: 1rem">
+                <!-- Rounded btn-->
+                <button class="btn btn__onlyIcon" data-color="primary"><img src="svg/searchIcon.svg" alt="Search"/></button>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <!-- Rounded btn-->
+                <button class="btn btn__dwnld" data-color="primary"><img src="svg/downloadBtn.svg" alt="Download"/>
+                  <div><span class="btn__dwnld-title">Загрузить лист</span><span class="btn__dwnld-descr">Низкое качество</span></div>
+                </button>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <!-- Rounded btn-->
+                <button class="btn btn__dwnld" data-color="nav"><img src="svg/downloadBtn.svg" alt="Download"/>
+                  <div><span class="btn__dwnld-title">Загрузить лист</span><span class="btn__dwnld-descr">Низкое качество</span></div>
+                </button>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <!-- Text with action-->
+                <button class="btn btn__withAction" data-color="primary"><span>With action</span><img src="svg/clearIcon.svg" alt="Clear"/></button>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <!-- Text with badge and active-->
+                <button class="btn btn__withActionLabel btn__withActionLabel-active" data-color="primary"><span>With badge</span><span>17</span></button><br/>
+                <!-- Text with badge and NOT active-->
+                <button class="btn btn__withActionLabel" data-color="default"><span>With badge not active</span><span>5</span></button>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <!-- Outlined-->
+                <button class="btn" data-color="primary" data-variant="outlined">Outlined</button>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <!-- Secodary bg-->
+                <button class="btn" data-color="secondary">Войти</button>
+              </li>
+            </ul>
           </div>
-        </h1><br/>
+          <div style="width: 100%">
+            <h1 style="font-weight: bold; font-size: 1.5rem">Buttons</h1><br/>
+            <ul style="text-align: left; margin-right: 2rem;">
+              <li style="margin-bottom: 1rem; background: #eee;">
+                <!-- Left nav-->
+                <button class="btn btn__onlyIcon" data-color="default"><img src="svg/arrowBackOutlined.svg" alt="Back"/></button>
+              </li>
+              <li style="margin-bottom: 1rem; background: #eee;">
+                <!-- Right Nav-->
+                <button class="btn btn__onlyIcon" data-color="default"><img src="svg/arrowForwardOutlined.svg" alt="Forward"/></button>
+              </li>
+              <li style="margin-bottom: 1rem; background: #eee;">
+                <!-- Close-->
+                <button class="btn btn__onlyIcon" data-color="default"><img src="svg/clearIconRed.svg" alt=""/></button>
+              </li>
+              <li style="margin-bottom: 1rem; background: #eee;">
+                <!-- Close-->
+                <button class="btn btn__onlyIcon btn__idea" data-color="default"><img src="svg/ideaIcon.svg" alt="idea"/></button>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <!-- Paginator-->
+                <!-- TODO NEED DISCUS-->
+                <ul style="display: flex;width: 200px;align-items: center;justify-content: space-between">
+                  <li>
+                    <button class="btn btn__pagination btn__pagination-active">1</button>
+                  </li>
+                  <li>
+                    <button class="btn btn__pagination">2</button>
+                  </li>
+                  <li>
+                    <button class="btn btn__pagination">...</button>
+                  </li>
+                  <li>
+                    <button class="btn btn__pagination">10</button>
+                  </li>
+                </ul>
+              </li>
+              <li style="margin-bottom: 1rem">
+                <!-- Secodary bg-->
+                <button class="btn" data-color="accent">Личный кабинет</button>
+              </li>
+            </ul>
+          </div>
+          <div style="width: 100%">
+            <h1 style="font-weight: bold; font-size: 1.5rem">Links</h1><br/>
+            <ul style="text-align: left">
+              <li style="margin-bottom: 1rem"><a class="link link__active">Active link</a></li>
+              <li style="margin-bottom: 1rem"><a class="link">Not Active link</a></li>
+              <li style="margin-bottom: 1rem"><a class="link link__nav link__withAction"><img src="svg/arrowBackIcon.svg" alt="Back"/><span>Вернуться назад</span></a></li>
+              <li style="margin-bottom: 1rem"><a class="link link__nav">Зарегистрироваться</a></li>
+            </ul>
+          </div>
+        </div><br/>
+        <h1 style="text-align: center">Dropdowns</h1><br/>
       </div>
     </main>
     <script src="runtime.js?v=1.0.0"></script>

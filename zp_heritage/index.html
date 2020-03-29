@@ -18,25 +18,26 @@
           <div class="topBannerInfo">
             <div class="topBannerInfo__title">Запорiзька Спадщина</div><img class="topBannerInfo__delimeter" src="svg/delimeter.svg" alt=""/>
             <div class="topBannerInfo__subtitle">Оцифровані колекції архівних, бiблiотечних, музейних та приватних зібрань.</div>
-            <div class="searchPanel">
-              <ul class="searchPanelGroup withLink">
-                <li class="searchPanelGroupItem searchSource">
-                  <select>
-                    <option selected="selected" value="all">Все источники</option>
-                    <option value="1">Все источники</option>
-                    <option value="2">Все источники 2</option>
-                    <option value="3">Все источники 3</option>
-                  </select>
-                </li>
-                <li class="searchPanelGroupItem searchInput">
-                  <input placeholder="Поиск по коллекциям"/>
-                </li>
-                <li class="searchPanelGroupItem searchLink"><span>Расширенный поиск</span></li>
-                <li class="searchPanelGroupItem searchBtn">
-                  <button class="defaultBtn"><img class="topBannerInfo__delimeter" src="svg/searchIcon.svg" alt="Search"/></button>
-                </li>
-              </ul>
-              <script>var x, i, j, selElmnt, a, b, c;
+            <div class="topBannerInfo__search">
+              <div class="searchPanel">
+                <ul class="searchPanelGroup withLink">
+                  <li class="searchPanelGroupItem searchSource">
+                    <select>
+                      <option selected="selected" value="all">Все источники</option>
+                      <option value="1">Все источники</option>
+                      <option value="2">Все источники 2</option>
+                      <option value="3">Все источники 3</option>
+                    </select>
+                  </li>
+                  <li class="searchPanelGroupItem searchInput">
+                    <input placeholder="Поиск по коллекциям"/>
+                  </li>
+                  <li class="searchPanelGroupItem searchLink"><span>Расширенный поиск</span></li>
+                  <li class="searchPanelGroupItem searchBtn">
+                    <button class="btn btn__onlyIcon" data-color="primary"><img src="svg/searchIcon.svg" alt="Search"/></button>
+                  </li>
+                </ul>
+                <script>var x, i, j, selElmnt, a, b, c;
 /*look for any elements with the class "searchSource":*/
 x = document.getElementsByClassName("searchSource");
 for (i = 0; i < x.length; i++) {
@@ -112,7 +113,8 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
-              </script>
+                </script>
+              </div>
             </div>
           </div>
           <div class="topBannerVideo"><img class="topBannerVideo__video" src="jpg/photo.jpg" alt=""/>
