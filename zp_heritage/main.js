@@ -119,7 +119,11 @@ var styles = __webpack_require__(10);
 
 
 // EXTERNAL MODULE: ./node_modules/tiny-slider/src/tiny-slider.js + 41 modules
-var tiny_slider = __webpack_require__(1);
+var tiny_slider = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/lodash/size.js
+var size = __webpack_require__(1);
+var size_default = /*#__PURE__*/__webpack_require__.n(size);
 
 // CONCATENATED MODULE: ./src/components/sliders/homeSlider/scripts.js
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -129,10 +133,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
+
 var scripts_slider = function slider(settings) {
   var collection = document.querySelector(settings.container);
 
-  var collectionSize = _size(collection.children);
+  var collectionSize = size_default()(collection.children);
 
   return Object(tiny_slider["a" /* tns */])(_objectSpread({
     items: 1,
@@ -141,11 +146,6 @@ var scripts_slider = function slider(settings) {
     nav: false,
     controls: collectionSize > 1,
     responsive: {
-      // 640: {
-      //   edgePadding: 20,
-      //   gutter: 20,
-      //   items: 2
-      // },
       960: {
         items: 2,
         controls: collectionSize > 2
@@ -202,10 +202,6 @@ jquery_default()(document).ready(function () {
   //   .find("input")
   //   .attr("placeholder", "Начните вводить");
 });
-// EXTERNAL MODULE: ./node_modules/lodash/size.js
-var size = __webpack_require__(4);
-var size_default = /*#__PURE__*/__webpack_require__.n(size);
-
 // CONCATENATED MODULE: ./src/pages/home/sourcesTypes.js
 function sourcesTypes_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
