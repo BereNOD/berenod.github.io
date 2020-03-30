@@ -8,8 +8,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes"/>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.2"/>
-    <link rel="stylesheet" href="main.css?v=1.0.2"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.3"/>
+    <link rel="stylesheet" href="main.css?v=1.0.3"/>
   </head>
   <body>
     <div class="topBannerWrapper">
@@ -21,7 +21,7 @@
       <div class="topBanner container">
         <div class="topBannerInfo">
           <div class="topBannerInfo__logo"><img class="topBannerInfo__logoImage" src="svg/logo.svg" alt="Запорiзька Спадщина"/></div><img class="topBannerInfo__delimeter" src="svg/delimeter.svg" alt=""/>
-          <div class="topBannerInfo__subtitle">Оцифровані колекції архівних, бiблiотечних, музейних та приватних зібрань.</div>
+          <div class="topBannerInfo__subtitle">Оцифровані колекції архівних, бiблiотечних, <br/> музейних та приватних зібрань.</div>
           <div class="topBannerVideo"><img class="topBannerVideo__video" src="jpg/photo.jpg" alt=""/>
             <button class="topBannerVideo__play"><img class="topBannerVideo__video" src="svg/play.svg" alt=""/></button>
           </div>
@@ -130,21 +130,48 @@ document.addEventListener("click", closeAllSelect);
       <div class="sliderWrapper sliderWrapper--collections">
         <div class="slider container">
           <h2 class="titleH2">Колекції</h2>
-          <div class="slider__slider js-slider__slider"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a>
+          <div class="sliderInner">
+            <button class="slick-prev sliderItem__arrow sliderItem__arrow--prev"><img src="svg/prev.svg" alt="Previous"/></button>
+            <button class="slick-prev sliderItem__arrow sliderItem__arrow--next"><img src="svg/next.svg" alt="Next"/></button>
+            <div class="slider__slider js-slider__slider">
+              <div class="sliderItemWrapper"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a></div>
+              <div class="sliderItemWrapper"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a></div>
+              <div class="sliderItemWrapper"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a></div>
+              <div class="sliderItemWrapper"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a></div>
+            </div>
           </div>
         </div>
       </div>
       <div class="sliderWrapper sliderWrapper--recent-receipts">
         <div class="slider container">
           <h2 class="titleH2">Останні надходження</h2>
-          <div class="slider__slider js-slider__slider"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a>
+          <div class="sliderInner">
+            <button class="slick-prev sliderItem__arrow sliderItem__arrow--prev"><img src="svg/prev.svg" alt="Previous"/></button>
+            <button class="slick-prev sliderItem__arrow sliderItem__arrow--next"><img src="svg/next.svg" alt="Next"/></button>
+            <div class="slider__slider js-slider__slider">
+              <div class="sliderItemWrapper"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a></div>
+              <div class="sliderItemWrapper"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a></div>
+              <div class="sliderItemWrapper"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a></div>
+              <div class="sliderItemWrapper"><a class="sliderItem" href="#"><img class="sliderItem__image" src="https://placehold.it/333" alt=""/><span class="sliderItem__caption">Назва колекції</span></a></div>
+            </div>
           </div>
         </div>
       </div>
       <div class="sourcesTypesWrapper">
         <div class="sourcesTypes container">
                 <h2 class="titleH2">Тип першоджерела</h2>
-          <div class="sourcesTypesInner"><a class="sourceType" href="#"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/mapsAndPlans.svg" alt="Мапи та плани" width="80" height="80"/></span><span class="sourceType__title">Мапи та плани</span></a><a class="sourceType" href="#"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/newspapers.svg" alt="Газети" width="80" height="80"/></span><span class="sourceType__title">Газети</span></a><a class="sourceType" href="#"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/photos.svg" alt="Свiтлини" width="80" height="80"/></span><span class="sourceType__title">Свiтлини</span></a><a class="sourceType" href="#"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/library.svg" alt="Бiблiофiка" width="80" height="80"/></span><span class="sourceType__title">Бiблiофiка</span></a><a class="sourceType" href="#"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/monuments.svg" alt="Пам'ятки" width="80" height="80"/></span><span class="sourceType__title">Пам'ятки</span></a><a class="sourceType" href="#"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/documents.svg" alt="Документи" width="80" height="80"/></span><span class="sourceType__title">Документи</span></a><a class="sourceType" href="#"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/graphics.svg" alt="Графiка" width="80" height="80"/></span><span class="sourceType__title">Графiка</span></a>
+          <div class="sourcesTypes__sliderWrapper">
+            <button class="slick-prev sliderItem__arrow sliderItem__arrow--prev"><img src="svg/prev.svg" alt="Previous"/></button>
+            <button class="slick-prev sliderItem__arrow sliderItem__arrow--next"><img src="svg/next.svg" alt="Next"/></button>
+            <div class="sourcesTypesInner">
+                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/mapsAndPlans.svg" alt="Мапи та плани" width="80" height="80"/></span><span class="sourceType__title">Мапи та плани</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/newspapers.svg" alt="Газети" width="80" height="80"/></span><span class="sourceType__title">Газети</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/photos.svg" alt="Свiтлини" width="80" height="80"/></span><span class="sourceType__title">Свiтлини</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/library.svg" alt="Бiблiофiка" width="80" height="80"/></span><span class="sourceType__title">Бiблiофiка</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/monuments.svg" alt="Пам'ятки" width="80" height="80"/></span><span class="sourceType__title">Пам'ятки</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/documents.svg" alt="Документи" width="80" height="80"/></span><span class="sourceType__title">Документи</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/graphics.svg" alt="Графiка" width="80" height="80"/></span><span class="sourceType__title">Графiка</span></a></div>
+            </div>
           </div>
         </div>
       </div>
@@ -172,8 +199,8 @@ document.addEventListener("click", closeAllSelect);
         </div>
       </div>
     </footer>
-    <script src="runtime.js?v=1.0.2"></script>
-    <script src="vendors.js?v=1.0.2"></script>
-    <script src="main.js?v=1.0.2"></script>
+    <script src="runtime.js?v=1.0.3"></script>
+    <script src="vendors.js?v=1.0.3"></script>
+    <script src="main.js?v=1.0.3"></script>
   </body>
 </html>
