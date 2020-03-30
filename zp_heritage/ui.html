@@ -8,8 +8,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes"/>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.9"/>
-    <link rel="stylesheet" href="main.css?v=1.0.9"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.10"/>
+    <link rel="stylesheet" href="main.css?v=1.0.10"/>
   </head>
   <body>
     <main>
@@ -35,69 +35,107 @@
             </li>
           </ul>
         </div><br/>
-        <div style="display: flex; justify-content: space-between">
+        <!-- Selects / Dropdowns-->
+        <h1 style="font-weight: bold; font-size: 1.5rem">Dropdowns (select2)</h1><br/>
+        <select class="select2Simple" style="width: 100%">
+          <option></option>
+          <option value="1">Item 1</option>
+          <option value="2">Item 2</option>
+          <option value="3">Item 3</option>
+          <option value="4">Item 4</option>
+          <option value="5">Item 5</option>
+        </select><br/><br/>
+        <select class="select2Search" style="width: 100%">
+          <option></option>
+          <option value="1">Item 1</option>
+          <option value="2">Item 2</option>
+          <option value="3">Item 3</option>
+          <option value="4">Item 4</option>
+          <option value="5">Item 5</option>
+        </select><br/><br/>
+        <div>
           <!-- BUTTONS-->
-          <div style="width: 100%">
-            <h1 style="font-weight: bold; font-size: 1.5rem">Buttons</h1><br/>
+          <h1 style="font-weight: bold; font-size: 1.5rem">Buttons</h1><br/>
+          <ul style="text-align: left; display: flex; justify-content: space-between; width: 100%">
+            <li style="margin-bottom: 1rem">
+              <!-- Rounded btn-->
+              <button class="btn btn__onlyIcon" data-color="primary"><img src="svg/searchIcon.svg" alt="Search"/></button>
+            </li>
+            <li style="margin-bottom: 1rem">
+              <!-- Rounded btn-->
+              <button class="btn btn__dwnld" data-color="primary"><img src="svg/downloadBtn.svg" alt="Download"/>
+                <div><span class="btn__dwnld-title">Загрузить лист</span><span class="btn__dwnld-descr">Низкое качество</span></div>
+              </button><br/>
+              <!-- Rounded btn-->
+              <button class="btn btn__dwnld" data-color="nav"><img src="svg/downloadBtn.svg" alt="Download"/>
+                <div><span class="btn__dwnld-title">Загрузить лист</span><span class="btn__dwnld-descr">Низкое качество</span></div>
+              </button>
+            </li>
+            <li style="margin-bottom: 1rem">
+              <!-- Text with action-->
+              <button class="btn btn__withAction" data-color="primary"><span>With action</span><img src="svg/clearIcon.svg" alt="Clear"/></button>
+            </li>
+            <li style="margin-bottom: 1rem">
+              <!-- Text with badge and active-->
+              <button class="btn btn__withActionLabel btn__withActionLabel-active" data-color="primary"><span>With badge</span><span>17</span></button><br/>
+              <!-- Text with badge and NOT active-->
+              <button class="btn btn__withActionLabel" data-color="default"><span>With badge not active</span><span>5</span></button>
+            </li>
+            <li style="margin-bottom: 1rem">
+              <!-- Outlined-->
+              <button class="btn" data-color="primary" data-variant="outlined">Outlined</button>
+            </li>
+            <li style="margin-bottom: 1rem">
+              <!-- Secodary bg-->
+              <button class="btn" data-color="secondary">Войти</button>
+            </li>
+            <li style="margin-bottom: 1rem; background: #eee;">
+              <!-- Left nav-->
+              <button class="btn btn__onlyIcon" data-color="default"><img src="svg/arrowBackOutlined.svg" alt="Back"/></button>
+            </li>
+            <li style="margin-bottom: 1rem; background: #eee;">
+              <!-- Right Nav-->
+              <button class="btn btn__onlyIcon" data-color="default"><img src="svg/arrowForwardOutlined.svg" alt="Forward"/></button>
+            </li>
+            <li style="margin-bottom: 1rem; background: #eee;">
+              <!-- Close-->
+              <button class="btn btn__onlyIcon" data-color="default"><img src="svg/clearIconRed.svg" alt=""/></button>
+            </li>
+            <li style="margin-bottom: 1rem; background: #eee;">
+              <!-- Idea-->
+              <button class="btn btn__onlyIcon btn__idea" data-color="default"><img src="svg/ideaIcon.svg" alt="idea"/></button>
+            </li>
+          </ul>
+          <ht></ht>
+          <div>
+            <h1 style="font-weight: bold; font-size: 1.5rem">Links</h1><br/>
+            <ul style="text-align: left; display: flex; justify-content: space-between; width: 100%">
+              <li style="margin-bottom: 1rem"><a class="link link__active">Active link</a></li>
+              <li style="margin-bottom: 1rem"><a class="link">Not Active link</a></li>
+              <li style="margin-bottom: 1rem"><a class="link link__nav link__withAction"><img src="svg/arrowBackIcon.svg" alt="Back"/><span>Вернуться назад</span></a></li>
+              <li style="margin-bottom: 1rem"><a class="link link__nav">Зарегистрироваться</a></li>
+            </ul>
             <ul style="text-align: left">
               <li style="margin-bottom: 1rem">
-                <!-- Rounded btn-->
-                <button class="btn btn__onlyIcon" data-color="primary"><img src="svg/searchIcon.svg" alt="Search"/></button>
-              </li>
-              <li style="margin-bottom: 1rem">
-                <!-- Rounded btn-->
-                <button class="btn btn__dwnld" data-color="primary"><img src="svg/downloadBtn.svg" alt="Download"/>
-                  <div><span class="btn__dwnld-title">Загрузить лист</span><span class="btn__dwnld-descr">Низкое качество</span></div>
-                </button>
-              </li>
-              <li style="margin-bottom: 1rem">
-                <!-- Rounded btn-->
-                <button class="btn btn__dwnld" data-color="nav"><img src="svg/downloadBtn.svg" alt="Download"/>
-                  <div><span class="btn__dwnld-title">Загрузить лист</span><span class="btn__dwnld-descr">Низкое качество</span></div>
-                </button>
-              </li>
-              <li style="margin-bottom: 1rem">
-                <!-- Text with action-->
-                <button class="btn btn__withAction" data-color="primary"><span>With action</span><img src="svg/clearIcon.svg" alt="Clear"/></button>
-              </li>
-              <li style="margin-bottom: 1rem">
-                <!-- Text with badge and active-->
-                <button class="btn btn__withActionLabel btn__withActionLabel-active" data-color="primary"><span>With badge</span><span>17</span></button><br/>
-                <!-- Text with badge and NOT active-->
-                <button class="btn btn__withActionLabel" data-color="default"><span>With badge not active</span><span>5</span></button>
-              </li>
-              <li style="margin-bottom: 1rem">
-                <!-- Outlined-->
-                <button class="btn" data-color="primary" data-variant="outlined">Outlined</button>
-              </li>
-              <li style="margin-bottom: 1rem">
-                <!-- Secodary bg-->
-                <button class="btn" data-color="secondary">Войти</button>
+                <label class="rdbtnContainer">Radio 1
+                  <input type="radio" checked="checked" name="radio"/><span class="rdbtnContainer-checkmark"></span>
+                </label><br/>
+                <label class="rdbtnContainer">Radio 2
+                  <input type="radio" name="radio"/><span class="rdbtnContainer-checkmark"></span>
+                </label>
               </li>
             </ul>
           </div>
-          <div style="width: 100%">
-            <h1 style="font-weight: bold; font-size: 1.5rem">Buttons</h1><br/>
-            <ul style="text-align: left; margin-right: 2rem;">
-              <li style="margin-bottom: 1rem; background: #eee;">
-                <!-- Left nav-->
-                <button class="btn btn__onlyIcon" data-color="default"><img src="svg/arrowBackOutlined.svg" alt="Back"/></button>
-              </li>
-              <li style="margin-bottom: 1rem; background: #eee;">
-                <!-- Right Nav-->
-                <button class="btn btn__onlyIcon" data-color="default"><img src="svg/arrowForwardOutlined.svg" alt="Forward"/></button>
-              </li>
-              <li style="margin-bottom: 1rem; background: #eee;">
-                <!-- Close-->
-                <button class="btn btn__onlyIcon" data-color="default"><img src="svg/clearIconRed.svg" alt=""/></button>
-              </li>
-              <li style="margin-bottom: 1rem; background: #eee;">
-                <!-- Close-->
-                <button class="btn btn__onlyIcon btn__idea" data-color="default"><img src="svg/ideaIcon.svg" alt="idea"/></button>
+          <hr/>
+          <div> 
+            <ul style="text-align: left; display: flex; justify-content: space-between; width: 100%">
+              <li style="margin-bottom: 1rem">
+                <h1 style="font-weight: bold; font-size: 1.5rem">Radio Buttons</h1><br/>
+                <!-- Secodary bg-->
+                <button class="btn" data-color="accent">Личный кабинет</button>
               </li>
               <li style="margin-bottom: 1rem">
-                <!-- Paginator-->
-                <!-- TODO NEED DISCUS-->
+                <h1 style="font-weight: bold; font-size: 1.5rem">Paginator</h1><br/>
                 <ul style="display: flex;width: 200px;align-items: center;justify-content: space-between">
                   <li>
                     <button class="btn btn__pagination btn__pagination-active">1</button>
@@ -113,43 +151,9 @@
                   </li>
                 </ul>
               </li>
-              <li style="margin-bottom: 1rem">
-                <!-- Secodary bg-->
-                <button class="btn" data-color="accent">Личный кабинет</button>
-              </li>
             </ul>
-          </div>
-          <div style="width: 100%">
-            <h1 style="font-weight: bold; font-size: 1.5rem">Links</h1><br/>
-            <ul style="text-align: left">
-              <li style="margin-bottom: 1rem"><a class="link link__active">Active link</a></li>
-              <li style="margin-bottom: 1rem"><a class="link">Not Active link</a></li>
-              <li style="margin-bottom: 1rem"><a class="link link__nav link__withAction"><img src="svg/arrowBackIcon.svg" alt="Back"/><span>Вернуться назад</span></a></li>
-              <li style="margin-bottom: 1rem"><a class="link link__nav">Зарегистрироваться</a></li>
-              <li style="margin-bottom: 1rem">
-                <label class="rdbtnContainer">Radio 1
-                  <input type="radio" checked="checked" name="radio"/><span class="rdbtnContainer-checkmark"></span>
-                </label><br/>
-                <label class="rdbtnContainer">Radio 2
-                  <input type="radio" name="radio"/><span class="rdbtnContainer-checkmark"></span>
-                </label>
-              </li>
-            </ul>
-            <h1 style="font-weight: bold; font-size: 1.5rem">Dropdowns (select2)</h1><br/>
-            <select class="select2Simple" style="width: 100%">
-              <option></option>
-              <option value="1">Item 1</option>
-              <option value="2">Item 2</option>
-              <option value="3">Item 3</option>
-            </select><br/><br/>
-            <select class="select2Search" style="width: 100%">
-              <option></option>
-              <option value="1">Item 1</option>
-              <option value="2">Item 2</option>
-              <option value="3">Item 3</option>
-            </select><br/>
-          </div>
-        </div><br/>
+          </div><br/>
+        </div>
       </div>
     </main>
     <footer class="footerWrapper">
@@ -175,8 +179,8 @@
         </div>
       </div>
     </footer>
-    <script src="runtime.js?v=1.0.9"></script>
-    <script src="vendors.js?v=1.0.9"></script>
-    <script src="main.js?v=1.0.9"></script>
+    <script src="runtime.js?v=1.0.10"></script>
+    <script src="vendors.js?v=1.0.10"></script>
+    <script src="main.js?v=1.0.10"></script>
   </body>
 </html>

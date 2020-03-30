@@ -8,6 +8,13 @@
 /***/ }),
 
 /***/ 27:
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 28:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -120,7 +127,10 @@ var styles = __webpack_require__(10);
 /* harmony default export */ var bannerBG = (__webpack_require__.p + "jpg/bannerBG.jpg?hash=15fe2364bd6036a1c473d842930155dd");
 // CONCATENATED MODULE: ./src/images/jpg/letter.jpg
 /* harmony default export */ var letter = (__webpack_require__.p + "jpg/letter.jpg?hash=8b9234d932500921dd521db1cff04c27");
+// CONCATENATED MODULE: ./src/images/jpg/document.jpg
+/* harmony default export */ var jpg_document = (__webpack_require__.p + "jpg/document.jpg?hash=ee9dd0ad1aff3d971338e5b1804eea23");
 // CONCATENATED MODULE: ./src/images/jpg/index.js
+
 
 
 
@@ -220,14 +230,12 @@ jquery_default()(document).ready(function () {
 
       if (i > 0) {
         jquery_default()(DIVselected).after(DIVdropdown);
-        var el = "<div class='select-item'>".concat(optionText, "</div>");
+        var el = "<div class='select-item' data-val=\"".concat(jquery_default()(o).val(), "\">").concat(optionText, "</div>");
         jquery_default()(DIVdropdown).append(el);
       }
     }); // hide drop by click anywhere
 
     jquery_default()("body").on("click", function (e) {
-      console.log(!jquery_default()(e.target).hasClass("searchSourceSelected"));
-
       if (!jquery_default()(e.target).hasClass("searchSourceSelected") && !jquery_default()(e.target).hasClass("searchBurger")) {
         if (!jquery_default()(DIVdropdown).hasClass("select-hide")) {
           jquery_default()(DIVdropdown).addClass("select-hide");
@@ -241,6 +249,7 @@ jquery_default()(document).ready(function () {
       jquery_default()(".select-item").removeClass("same-as-selected");
       jquery_default()(this).addClass("same-as-selected");
       jquery_default()(DIVselected).text(jquery_default()(this).html());
+      select.val(+jquery_default()(this).attr("data-val"));
       jquery_default()(DIVdropdown).toggleClass("select-hide");
     });
   })(jquery_default.a); // $(".custom-dropdown").not(".custom-dropdown2").customSelect({
@@ -320,10 +329,15 @@ var sourcesTypes_recentReceiptsSlider = sourcesTypes_slider({
   prevButton: ".sourcesTypesWrapper .sliderItem__arrow--prev",
   nextButton: ".sourcesTypesWrapper .sliderItem__arrow--next"
 });
+// EXTERNAL MODULE: ./src/pages/document/slider.js
+var document_slider = __webpack_require__(27);
+
 // CONCATENATED MODULE: ./src/pages/home/index.pug
 /* harmony default export */ var home = (__webpack_require__.p + "index.html");
 // CONCATENATED MODULE: ./src/pages/document/document.pug
 /* harmony default export */ var document_document = (__webpack_require__.p + "document.html");
+// CONCATENATED MODULE: ./src/pages/document/zoomed-page-document.pug
+/* harmony default export */ var zoomed_page_document = (__webpack_require__.p + "zoomed-page-document.html");
 // CONCATENATED MODULE: ./src/pages/ui.pug
 /* harmony default export */ var ui = (__webpack_require__.p + "ui.html");
 // CONCATENATED MODULE: ./src/index.js
@@ -332,6 +346,8 @@ var sourcesTypes_recentReceiptsSlider = sourcesTypes_slider({
 
 
  // import "jquery-custom-select";
+
+
 
 
 
@@ -377,4 +393,4 @@ var sourcesTypes_recentReceiptsSlider = sourcesTypes_slider({
 
 /***/ })
 
-},[[27,1,2]]]);
+},[[28,1,2]]]);
