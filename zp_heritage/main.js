@@ -82,7 +82,10 @@ var styles = __webpack_require__(10);
 /* harmony default export */ var instagram = (__webpack_require__.p + "svg/instagram.svg?hash=2e2fbf31ecd683171703bac0788504e9");
 // CONCATENATED MODULE: ./src/images/svg/youtube.svg
 /* harmony default export */ var youtube = (__webpack_require__.p + "svg/youtube.svg?hash=630b28229c6799b13d2293de8f7a0e4f");
+// CONCATENATED MODULE: ./src/images/svg/arrowDownOutline.svg
+/* harmony default export */ var arrowDownOutline = (__webpack_require__.p + "svg/arrowDownOutline.svg?hash=97728ced9351e3f946df1db945f0468b");
 // CONCATENATED MODULE: ./src/images/svg/index.js
+
 
 
 
@@ -137,6 +140,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var scripts_slider = function slider(settings) {
   var collection = document.querySelector(settings.container);
 
+  if (!collection) {
+    return false;
+  }
+
   var collectionSize = size_default()(collection.children);
 
   return Object(tiny_slider["a" /* tns */])(_objectSpread({
@@ -185,7 +192,52 @@ jquery_default()(document).ready(function () {
     searchInputPlaceholder: "Начните ввод"
   });
   jquery_default()('.select2-selection__arrow b[role="presentation"]').hide();
-  jquery_default()(".select2-selection__arrow").append('<img class="dropdownArrow" src="svg/arrowBackOutlined.svg" alt="drop" />'); // $(".custom-dropdown").not(".custom-dropdown2").customSelect({
+  jquery_default()(".select2-selection__arrow").append('<img class="dropdownArrow" src="svg/arrowDownOutline.svg" alt="drop" />'); // Dropdown from search panel
+
+  (function () {
+    var wrapper = jquery_default()(".searchSource");
+    var select = wrapper.find("select");
+    var options = select.find("option");
+    var DIVselected = document.createElement("DIV");
+    var DIVdropdown = document.createElement("DIV");
+    select.hide();
+    jquery_default()(DIVselected).attr("class", "searchSourceSelected");
+    jquery_default()(DIVdropdown).attr("class", "select-items select-hide");
+    options.map(function (i, o) {
+      var optionText = jquery_default()(o).html();
+      select.after(DIVselected); // set default option
+
+      if (i === 0) {
+        jquery_default()(DIVselected).text(optionText);
+      } // skip default option for drop
+
+
+      if (i > 0) {
+        jquery_default()(DIVselected).after(DIVdropdown);
+        var el = "<div class='select-item'>".concat(optionText, "</div>");
+        jquery_default()(DIVdropdown).append(el);
+      }
+    }); // hide drop by click anywhere
+
+    jquery_default()("body").on("click", function (e) {
+      console.log(!jquery_default()(e.target).hasClass("searchSourceSelected"));
+
+      if (!jquery_default()(e.target).hasClass("searchSourceSelected") && !jquery_default()(e.target).hasClass("searchBurger")) {
+        if (!jquery_default()(DIVdropdown).hasClass("select-hide")) {
+          jquery_default()(DIVdropdown).addClass("select-hide");
+        }
+      } else {
+        jquery_default()(DIVdropdown).toggleClass("select-hide");
+      }
+    }); // add active class and set selected
+
+    jquery_default()("body").on("click", ".select-item", function () {
+      jquery_default()(".select-item").removeClass("same-as-selected");
+      jquery_default()(this).addClass("same-as-selected");
+      jquery_default()(DIVselected).text(jquery_default()(this).html());
+      jquery_default()(DIVdropdown).toggleClass("select-hide");
+    });
+  })(jquery_default.a); // $(".custom-dropdown").not(".custom-dropdown2").customSelect({
   //   search: false,
   //   placeholder: "Плейсхолдер",
   //   transition: 200,
@@ -201,6 +253,7 @@ jquery_default()(document).ready(function () {
   //   .siblings(".custom-select")
   //   .find("input")
   //   .attr("placeholder", "Начните вводить");
+
 });
 // CONCATENATED MODULE: ./src/pages/home/sourcesTypes.js
 function sourcesTypes_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -213,6 +266,10 @@ function sourcesTypes_defineProperty(obj, key, value) { if (key in obj) { Object
 
 var sourcesTypes_slider = function slider(settings) {
   var collection = document.querySelector(settings.container);
+
+  if (!collection) {
+    return false;
+  }
 
   var collectionSize = size_default()(collection.children);
 
@@ -247,7 +304,7 @@ var sourcesTypes_slider = function slider(settings) {
       },
       1366: {
         items: 7,
-        disable: collectionSize === 7
+        disable: collectionSize <= 7
       }
     }
   }, settings));
