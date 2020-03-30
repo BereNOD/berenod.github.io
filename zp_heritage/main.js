@@ -130,11 +130,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var scripts_slider = function slider(settings) {
+  var collection = document.querySelector(settings.container);
+
+  var collectionSize = _size(collection.children);
+
   return Object(tiny_slider["a" /* tns */])(_objectSpread({
     items: 1,
     center: true,
     mouseDrag: true,
     nav: false,
+    controls: collectionSize > 1,
     responsive: {
       // 640: {
       //   edgePadding: 20,
@@ -142,10 +147,12 @@ var scripts_slider = function slider(settings) {
       //   items: 2
       // },
       960: {
-        items: 2
+        items: 2,
+        controls: collectionSize > 2
       },
       1400: {
-        items: 3
+        items: 3,
+        controls: collectionSize > 3
       }
     }
   }, settings));
