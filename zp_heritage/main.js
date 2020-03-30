@@ -84,7 +84,10 @@ var styles = __webpack_require__(10);
 /* harmony default export */ var youtube = (__webpack_require__.p + "svg/youtube.svg?hash=630b28229c6799b13d2293de8f7a0e4f");
 // CONCATENATED MODULE: ./src/images/svg/arrowDownOutline.svg
 /* harmony default export */ var arrowDownOutline = (__webpack_require__.p + "svg/arrowDownOutline.svg?hash=97728ced9351e3f946df1db945f0468b");
+// CONCATENATED MODULE: ./src/images/svg/zoomOpen.svg
+/* harmony default export */ var zoomOpen = (__webpack_require__.p + "svg/zoomOpen.svg?hash=bdcebdaa6e58a879142450480a918956");
 // CONCATENATED MODULE: ./src/images/svg/index.js
+
 
 
 
@@ -115,7 +118,10 @@ var styles = __webpack_require__(10);
 /* harmony default export */ var photo = (__webpack_require__.p + "jpg/photo.jpg?hash=fe6ac03d4d1ecdfc2ed7bdd5673ceaed");
 // CONCATENATED MODULE: ./src/images/jpg/bannerBG.jpg
 /* harmony default export */ var bannerBG = (__webpack_require__.p + "jpg/bannerBG.jpg?hash=15fe2364bd6036a1c473d842930155dd");
+// CONCATENATED MODULE: ./src/images/jpg/letter.jpg
+/* harmony default export */ var letter = (__webpack_require__.p + "jpg/letter.jpg?hash=8b9234d932500921dd521db1cff04c27");
 // CONCATENATED MODULE: ./src/images/jpg/index.js
+
 
 
 // CONCATENATED MODULE: ./src/images/index.js
@@ -316,6 +322,8 @@ var sourcesTypes_recentReceiptsSlider = sourcesTypes_slider({
 });
 // CONCATENATED MODULE: ./src/pages/home/index.pug
 /* harmony default export */ var home = (__webpack_require__.p + "index.html");
+// CONCATENATED MODULE: ./src/pages/document/document.pug
+/* harmony default export */ var document_document = (__webpack_require__.p + "document.html");
 // CONCATENATED MODULE: ./src/pages/ui.pug
 /* harmony default export */ var ui = (__webpack_require__.p + "ui.html");
 // CONCATENATED MODULE: ./src/index.js
@@ -324,6 +332,7 @@ var sourcesTypes_recentReceiptsSlider = sourcesTypes_slider({
 
 
  // import "jquery-custom-select";
+
 
 
 
