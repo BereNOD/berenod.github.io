@@ -1,20 +1,46 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 10:
+/***/ 11:
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {(function ($) {
+  var Defaults = $.fn.select2.amd.require("select2/defaults");
+
+  $.extend(Defaults.defaults, {
+    searchInputPlaceholder: ""
+  });
+
+  var SearchDropdown = $.fn.select2.amd.require("select2/dropdown/search");
+
+  var _renderSearchDropdown = SearchDropdown.prototype.render;
+
+  SearchDropdown.prototype.render = function (decorated) {
+    // invoke parent method
+    var $rendered = _renderSearchDropdown.apply(this, Array.prototype.slice.apply(arguments));
+
+    this.$search.attr("placeholder", this.options.get("searchInputPlaceholder"));
+    return $rendered;
+  };
+})(__webpack_provided_window_dot_jQuery);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
+
+/***/ }),
+
+/***/ 14:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 27:
+/***/ 31:
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
 
-/***/ 28:
+/***/ 32:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,22 +48,25 @@
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./src/fonts/index.less
-var fonts = __webpack_require__(5);
+var fonts = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/owl.carousel/dist/owl.carousel.js
-var owl_carousel = __webpack_require__(6);
+var owl_carousel = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/slick-carousel/slick/slick.js
-var slick = __webpack_require__(7);
+var slick = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/select2/dist/js/select2.js
-var select2 = __webpack_require__(8);
+var select2 = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/components/select/pluginForSelect2.js
-var pluginForSelect2 = __webpack_require__(9);
+var pluginForSelect2 = __webpack_require__(11);
+
+// EXTERNAL MODULE: ./node_modules/dropzone/dist/dropzone.js
+var dropzone = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/styles.less
-var styles = __webpack_require__(10);
+var styles = __webpack_require__(14);
 
 // CONCATENATED MODULE: ./src/images/svg/logo.svg
 /* harmony default export */ var logo = (__webpack_require__.p + "svg/logo.svg?hash=c88df60977c15548fef84a88291bbf67");
@@ -93,7 +122,10 @@ var styles = __webpack_require__(10);
 /* harmony default export */ var arrowDownOutline = (__webpack_require__.p + "svg/arrowDownOutline.svg?hash=97728ced9351e3f946df1db945f0468b");
 // CONCATENATED MODULE: ./src/images/svg/zoomOpen.svg
 /* harmony default export */ var zoomOpen = (__webpack_require__.p + "svg/zoomOpen.svg?hash=bdcebdaa6e58a879142450480a918956");
+// CONCATENATED MODULE: ./src/images/svg/arrowDropdownCircle.svg
+/* harmony default export */ var arrowDropdownCircle = (__webpack_require__.p + "svg/arrowDropdownCircle.svg?hash=2f3daa04099f024efe3fb463c0887be9");
 // CONCATENATED MODULE: ./src/images/svg/index.js
+
 
 
 
@@ -129,7 +161,10 @@ var styles = __webpack_require__(10);
 /* harmony default export */ var letter = (__webpack_require__.p + "jpg/letter.jpg?hash=8b9234d932500921dd521db1cff04c27");
 // CONCATENATED MODULE: ./src/images/jpg/document.jpg
 /* harmony default export */ var jpg_document = (__webpack_require__.p + "jpg/document.jpg?hash=ee9dd0ad1aff3d971338e5b1804eea23");
+// CONCATENATED MODULE: ./src/images/jpg/searchResultPreview.jpg
+/* harmony default export */ var searchResultPreview = (__webpack_require__.p + "jpg/searchResultPreview.jpg?hash=19126b86f874e3d4978169a30b00a944");
 // CONCATENATED MODULE: ./src/images/jpg/index.js
+
 
 
 
@@ -216,15 +251,17 @@ jquery_default()(document).ready(function () {
     var options = select.find("option");
     var DIVselected = document.createElement("DIV");
     var DIVdropdown = document.createElement("DIV");
+    var arrow = '<img class="searchSourceDropdownArrow" src="svg/arrowDropdownCircle.svg" alt="drop" />';
     select.hide();
     jquery_default()(DIVselected).attr("class", "searchSourceSelected");
     jquery_default()(DIVdropdown).attr("class", "select-items select-hide");
     options.map(function (i, o) {
       var optionText = jquery_default()(o).html();
-      select.after(DIVselected); // set default option
+      select.after(DIVselected);
+      jquery_default()(DIVselected); // set default option
 
       if (i === 0) {
-        jquery_default()(DIVselected).text(optionText);
+        jquery_default()(DIVselected).html("<span>".concat(optionText, "</span>").concat(arrow));
       } // skip default option for drop
 
 
@@ -238,9 +275,15 @@ jquery_default()(document).ready(function () {
     jquery_default()("body").on("click", function (e) {
       if (!jquery_default()(e.target).hasClass("searchSourceSelected") && !jquery_default()(e.target).hasClass("searchBurger")) {
         if (!jquery_default()(DIVdropdown).hasClass("select-hide")) {
-          jquery_default()(DIVdropdown).addClass("select-hide");
+          //dropdown
+          jquery_default()(DIVdropdown).addClass("select-hide"); //selected value
+
+          jquery_default()(DIVselected).removeClass("select-open");
         }
       } else {
+        //selected value
+        jquery_default()(DIVselected).toggleClass("select-open"); //dropdown
+
         jquery_default()(DIVdropdown).toggleClass("select-hide");
       }
     }); // add active class and set selected
@@ -248,7 +291,7 @@ jquery_default()(document).ready(function () {
     jquery_default()("body").on("click", ".select-item", function () {
       jquery_default()(".select-item").removeClass("same-as-selected");
       jquery_default()(this).addClass("same-as-selected");
-      jquery_default()(DIVselected).text(jquery_default()(this).html());
+      jquery_default()(DIVselected).find("span").text(jquery_default()(this).html());
       select.val(+jquery_default()(this).attr("data-val"));
       jquery_default()(DIVdropdown).toggleClass("select-hide");
     });
@@ -269,6 +312,40 @@ jquery_default()(document).ready(function () {
   //   .find("input")
   //   .attr("placeholder", "Начните вводить");
 
+});
+// EXTERNAL MODULE: ./node_modules/nouislider/distribute/nouislider.js
+var nouislider = __webpack_require__(6);
+var nouislider_default = /*#__PURE__*/__webpack_require__.n(nouislider);
+
+// EXTERNAL MODULE: ./node_modules/wnumb/wNumb.js
+var wNumb = __webpack_require__(3);
+var wNumb_default = /*#__PURE__*/__webpack_require__.n(wNumb);
+
+// CONCATENATED MODULE: ./src/components/rangeSlider/slider.js
+
+
+
+jquery_default()(document).ready(function () {
+  var slider = document.querySelector(".slider");
+  nouislider_default.a.create(slider, {
+    start: [1208, 2010],
+    tooltips: [wNumb_default()({
+      decimals: 0
+    }), wNumb_default()({
+      decimals: 0
+    })],
+    range: {
+      min: 0,
+      max: 2000
+    }
+  });
+});
+// CONCATENATED MODULE: ./src/components/dropzone/index.js
+
+jquery_default()(document).ready(function () {
+  jquery_default()(".dropzoneContainer").dropzone({
+    url: "/file/post"
+  });
 });
 // CONCATENATED MODULE: ./src/pages/home/sourcesTypes.js
 function sourcesTypes_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -330,10 +407,12 @@ var sourcesTypes_recentReceiptsSlider = sourcesTypes_slider({
   nextButton: ".sourcesTypesWrapper .sliderItem__arrow--next"
 });
 // EXTERNAL MODULE: ./src/pages/document/slider.js
-var document_slider = __webpack_require__(27);
+var document_slider = __webpack_require__(31);
 
 // CONCATENATED MODULE: ./src/pages/home/index.pug
 /* harmony default export */ var home = (__webpack_require__.p + "index.html");
+// CONCATENATED MODULE: ./src/pages/search/search.pug
+/* harmony default export */ var search = (__webpack_require__.p + "search.html");
 // CONCATENATED MODULE: ./src/pages/document/document.pug
 /* harmony default export */ var document_document = (__webpack_require__.p + "document.html");
 // CONCATENATED MODULE: ./src/pages/document/zoomed-page-document.pug
@@ -345,7 +424,11 @@ var document_slider = __webpack_require__(27);
 
 
 
- // import "jquery-custom-select";
+
+
+
+
+
 
 
 
@@ -360,37 +443,11 @@ var document_slider = __webpack_require__(27);
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {(function ($) {
-  var Defaults = $.fn.select2.amd.require("select2/defaults");
-
-  $.extend(Defaults.defaults, {
-    searchInputPlaceholder: ""
-  });
-
-  var SearchDropdown = $.fn.select2.amd.require("select2/dropdown/search");
-
-  var _renderSearchDropdown = SearchDropdown.prototype.render;
-
-  SearchDropdown.prototype.render = function (decorated) {
-    // invoke parent method
-    var $rendered = _renderSearchDropdown.apply(this, Array.prototype.slice.apply(arguments));
-
-    this.$search.attr("placeholder", this.options.get("searchInputPlaceholder"));
-    return $rendered;
-  };
-})(__webpack_provided_window_dot_jQuery);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
-
 /***/ })
 
-},[[28,1,2]]]);
+},[[32,1,2]]]);
