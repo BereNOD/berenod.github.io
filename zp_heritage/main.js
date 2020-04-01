@@ -188,7 +188,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var scripts_slider = function slider(settings) {
+var scripts_homeSlider = function homeSlider(settings) {
   var collection = document.querySelector(settings.container);
 
   if (!collection) {
@@ -215,15 +215,15 @@ var scripts_slider = function slider(settings) {
     }
   }, settings));
 };
-var collectionsSlider = scripts_slider({
-  container: ".sliderWrapper--collections .js-slider__slider",
-  prevButton: ".sliderWrapper--collections .sliderItem__arrow--prev",
-  nextButton: ".sliderWrapper--collections .sliderItem__arrow--next"
+var collectionsSlider = scripts_homeSlider({
+  container: ".homeSliderWrapper--collections .js-homeSlider__homeSlider",
+  prevButton: ".homeSliderWrapper--collections .homeSliderItem__arrow--prev",
+  nextButton: ".homeSliderWrapper--collections .homeSliderItem__arrow--next"
 });
-var recentReceiptsSlider = scripts_slider({
-  container: ".sliderWrapper--recent-receipts .js-slider__slider",
-  prevButton: ".sliderWrapper--recent-receipts .sliderItem__arrow--prev",
-  nextButton: ".sliderWrapper--recent-receipts .sliderItem__arrow--next"
+var recentReceiptsSlider = scripts_homeSlider({
+  container: ".homeSliderWrapper--recent-receipts .js-homeSlider__homeSlider",
+  prevButton: ".homeSliderWrapper--recent-receipts .homeSliderItem__arrow--prev",
+  nextButton: ".homeSliderWrapper--recent-receipts .homeSliderItem__arrow--next"
 });
 // EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js
 var jquery = __webpack_require__(0);
@@ -327,6 +327,11 @@ var wNumb_default = /*#__PURE__*/__webpack_require__.n(wNumb);
 
 jquery_default()(document).ready(function () {
   var slider = document.querySelector(".slider");
+
+  if (!slider) {
+    return;
+  }
+
   nouislider_default.a.create(slider, {
     start: [1208, 2010],
     tooltips: [wNumb_default()({
@@ -356,7 +361,7 @@ function sourcesTypes_defineProperty(obj, key, value) { if (key in obj) { Object
 
 
 
-var sourcesTypes_slider = function slider(settings) {
+var sourcesTypes_sourcesTypesSlider = function sourcesTypesSlider(settings) {
   var collection = document.querySelector(settings.container);
 
   if (!collection) {
@@ -401,10 +406,10 @@ var sourcesTypes_slider = function slider(settings) {
     }
   }, settings));
 };
-var sourcesTypes_recentReceiptsSlider = sourcesTypes_slider({
+var sourcesTypes_recentReceiptsSlider = sourcesTypes_sourcesTypesSlider({
   container: ".sourcesTypesWrapper .sourcesTypesInner",
-  prevButton: ".sourcesTypesWrapper .sliderItem__arrow--prev",
-  nextButton: ".sourcesTypesWrapper .sliderItem__arrow--next"
+  prevButton: ".sourcesTypesWrapper .homeSliderItem__arrow--prev",
+  nextButton: ".sourcesTypesWrapper .homeSliderItem__arrow--next"
 });
 // EXTERNAL MODULE: ./src/pages/document/slider.js
 var document_slider = __webpack_require__(31);
@@ -419,7 +424,13 @@ var document_slider = __webpack_require__(31);
 /* harmony default export */ var zoomed_page_document = (__webpack_require__.p + "zoomed-page-document.html");
 // CONCATENATED MODULE: ./src/pages/ui.pug
 /* harmony default export */ var ui = (__webpack_require__.p + "ui.html");
+// CONCATENATED MODULE: ./src/pages/detaledSearch/detaledSearch.pug
+/* harmony default export */ var detaledSearch = (__webpack_require__.p + "detaledSearch.html");
+// CONCATENATED MODULE: ./src/pages/cabinet/cabinet.pug
+/* harmony default export */ var cabinet = (__webpack_require__.p + "cabinet.html");
 // CONCATENATED MODULE: ./src/index.js
+
+
 
 
 
