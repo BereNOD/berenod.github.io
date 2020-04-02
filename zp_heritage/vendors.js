@@ -10607,11 +10607,11 @@ return jQuery;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseKeys = __webpack_require__(17),
-    getTag = __webpack_require__(19),
-    isArrayLike = __webpack_require__(20),
-    isString = __webpack_require__(24),
-    stringSize = __webpack_require__(27);
+var baseKeys = __webpack_require__(18),
+    getTag = __webpack_require__(20),
+    isArrayLike = __webpack_require__(21),
+    isString = __webpack_require__(25),
+    stringSize = __webpack_require__(28);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -10665,10 +10665,10 @@ module.exports = size;
 __webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ tns; });
 
 // EXTERNAL MODULE: ./node_modules/tiny-slider/src/helpers/Object.keys.js
-var Object_keys = __webpack_require__(15);
+var Object_keys = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/tiny-slider/src/helpers/childNode.remove.js
-var childNode_remove = __webpack_require__(16);
+var childNode_remove = __webpack_require__(17);
 
 // CONCATENATED MODULE: ./node_modules/tiny-slider/src/helpers/raf.js
 var raf_win = window;
@@ -33300,7 +33300,8 @@ module.exports = function(module) {
 
 /***/ }),
 /* 14 */,
-/* 15 */
+/* 15 */,
+/* 16 */
 /***/ (function(module, exports) {
 
 // Object.keys
@@ -33317,7 +33318,7 @@ if (!Object.keys) {
 }
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 // ChildNode.remove
@@ -33330,10 +33331,10 @@ if(!("remove" in Element.prototype)){
 }
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(18);
+var overArg = __webpack_require__(19);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -33342,7 +33343,7 @@ module.exports = nativeKeys;
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 /**
@@ -33363,7 +33364,7 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -33391,11 +33392,11 @@ module.exports = objectToString;
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(21),
-    isLength = __webpack_require__(23);
+var isFunction = __webpack_require__(22),
+    isLength = __webpack_require__(24);
 
 /**
  * Checks if `value` is array-like. A value is considered array-like if it's
@@ -33430,11 +33431,11 @@ module.exports = isArrayLike;
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4),
-    isObject = __webpack_require__(22);
+    isObject = __webpack_require__(23);
 
 /** `Object#toString` result references. */
 var asyncTag = '[object AsyncFunction]',
@@ -33473,7 +33474,7 @@ module.exports = isFunction;
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 /**
@@ -33510,7 +33511,7 @@ module.exports = isObject;
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
@@ -33551,12 +33552,12 @@ module.exports = isLength;
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4),
-    isArray = __webpack_require__(25),
-    isObjectLike = __webpack_require__(26);
+    isArray = __webpack_require__(26),
+    isObjectLike = __webpack_require__(27);
 
 /** `Object#toString` result references. */
 var stringTag = '[object String]';
@@ -33587,7 +33588,7 @@ module.exports = isString;
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 /**
@@ -33619,7 +33620,7 @@ module.exports = isArray;
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 /**
@@ -33654,12 +33655,12 @@ module.exports = isObjectLike;
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var asciiSize = __webpack_require__(28),
-    hasUnicode = __webpack_require__(29),
-    unicodeSize = __webpack_require__(30);
+var asciiSize = __webpack_require__(29),
+    hasUnicode = __webpack_require__(30),
+    unicodeSize = __webpack_require__(31);
 
 /**
  * Gets the number of symbols in `string`.
@@ -33678,7 +33679,7 @@ module.exports = stringSize;
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseProperty = __webpack_require__(5);
@@ -33696,7 +33697,7 @@ module.exports = asciiSize;
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 /**
@@ -33720,7 +33721,7 @@ module.exports = stubFalse;
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseProperty = __webpack_require__(5);

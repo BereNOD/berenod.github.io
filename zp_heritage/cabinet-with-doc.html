@@ -42,26 +42,55 @@
             </div>
           </div>
           <hr/>
-          <div class="row">
-            <div class="col-sm-6 col-6">
-              <h2 class="titleH2">Мої документи</h2>
-            </div>
-            <div class="col-sm-6 col-6">
-              <div class="btnGroup">
-                <button class="btn btn__dwnld" data-color="nav"><img src="svg/downloadBtn.svg" alt="Download"/>
-                  <div><span class="btn__dwnld-title">Завантажити </span><span class="btn__dwnld-descr">Cвiй документ</span></div>
-                </button>
+          <div class="myDocsBlock">
+            <div class="row">
+              <div class="col-sm-6 col-6">
+                <h2 class="titleH2">Мої документи</h2>
+              </div>
+              <div class="col-sm-6 col-6">
+                <div class="btnGroup">
+                  <button class="btn btn__dwnld" data-color="nav"><img src="svg/downloadBtn.svg" alt="Download"/>
+                    <div><span class="btn__dwnld-title">Завантажити </span><span class="btn__dwnld-descr">Cвiй документ</span></div>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-between">
-            <div class="col-sm-12 col-12">
-              <div class="userDocBlock">
-                <div class="descr">
-                  <h3 class="titleH3 titleH3--userDocBlockDescr">У вас є документи, які можуть бути корисні суспільству?
-                  </h3>
-                  <h3 class="titleH3 titleH3--userDocBlockDescr">Завантажте їх і поділіться з спільнотою.
-                  </h3>
+            <div class="row justify-content-between">
+              <div class="col-sm-12 col-12">
+                <div class="row dwnldCard">
+                  <div class="col-sm-2 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
+                  <div class="col-sm-8 col-12">
+                    <div class="dwnlDescr">
+                      <div class="check-descrWrap">
+                        <h3 class="titleH3 titleH3--dwnlDescrTitle">Назва документа
+                        </h3>
+                        <div class="check-descr link__active"><img class="dropdownArrow" src="svg/arrowDropdownCircle.svg" alt="drop"/>Перевiрен та додан</div>
+                      </div>
+                      <div class="dwnlDescrBody">
+                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.Lorem Ipsum является стандартной "рыбой" для текстов на латинице</div>
+                      <div class="dwnlDescrAttrs">
+                        <div class="dwnlDescrAttr">
+                          <div class="dwnlDescrAttrKey">Автор:</div>
+                          <div class="dwnlDescrAttrVal">Тарас Шевченко</div>
+                        </div>
+                        <div class="dwnlDescrAttr">
+                          <div class="dwnlDescrAttrKey">Тип документа:</div>
+                          <div class="dwnlDescrAttrVal">Книга</div>
+                        </div>
+                        <div class="dwnlDescrAttr">
+                          <div class="dwnlDescrAttrKey">Рiк:</div>
+                          <div class="dwnlDescrAttrVal">1864</div>
+                        </div>
+                        <div class="dwnlDescrAttr">
+                          <div class="dwnlDescrAttrKey">Мiсце зберiгання:</div>
+                          <div class="dwnlDescrAttrVal">Музей Запорізької Січі</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2 col-12 dwnlDetailCol">
+                    <button class="btn dwnlDetail" data-color="primary" data-variant="outlined">Детальніше</button>
+                  </div>
                 </div>
               </div>
             </div>

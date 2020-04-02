@@ -33,14 +33,40 @@
 
 /***/ }),
 
-/***/ 31:
+/***/ 15:
+/***/ (function(module, exports) {
+
+var searchFieldToggleHandler = function searchFieldToggleHandler(e) {
+  var panel = document.querySelector(".searchPanel__field--open");
+  var target = e.target.closest(".js-searchPanel__buttonOpener");
+  var form = target ? target.closest(".js-searchPanel") : false;
+
+  if (panel && !e.target.closest(".js-searchPanel")) {
+    panel.classList.remove("searchPanel__field--open");
+  }
+
+  if (!target) {
+    return;
+  }
+
+  if (form && !form.classList.contains("searchPanel__field--open")) {
+    e.preventDefault();
+    form.classList.add("searchPanel__field--open");
+  }
+};
+
+addEventListener("click", searchFieldToggleHandler);
+
+/***/ }),
+
+/***/ 32:
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -171,6 +197,9 @@ var styles = __webpack_require__(14);
 
 // CONCATENATED MODULE: ./src/images/index.js
 
+
+// EXTERNAL MODULE: ./src/components/search/scripts.js
+var scripts = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/tiny-slider/src/tiny-slider.js + 41 modules
 var tiny_slider = __webpack_require__(2);
@@ -412,7 +441,7 @@ var sourcesTypes_recentReceiptsSlider = sourcesTypes_sourcesTypesSlider({
   nextButton: ".sourcesTypesWrapper .homeSliderItem__arrow--next"
 });
 // EXTERNAL MODULE: ./src/pages/document/slider.js
-var document_slider = __webpack_require__(31);
+var document_slider = __webpack_require__(32);
 
 // CONCATENATED MODULE: ./src/pages/home/index.pug
 /* harmony default export */ var home = (__webpack_require__.p + "index.html");
@@ -424,11 +453,39 @@ var document_slider = __webpack_require__(31);
 /* harmony default export */ var zoomed_page_document = (__webpack_require__.p + "zoomed-page-document.html");
 // CONCATENATED MODULE: ./src/pages/ui.pug
 /* harmony default export */ var ui = (__webpack_require__.p + "ui.html");
+// CONCATENATED MODULE: ./src/pages/collection/collection.pug
+/* harmony default export */ var collection_collection = (__webpack_require__.p + "collection.html");
+// CONCATENATED MODULE: ./src/pages/collection/collection-no-comments.pug
+/* harmony default export */ var collection_no_comments = (__webpack_require__.p + "collection-no-comments.html");
+// CONCATENATED MODULE: ./src/pages/collection/collection-entered.pug
+/* harmony default export */ var collection_entered = (__webpack_require__.p + "collection-entered.html");
+// CONCATENATED MODULE: ./src/pages/collection/collection-entered-admin.pug
+/* harmony default export */ var collection_entered_admin = (__webpack_require__.p + "collection-entered-admin.html");
 // CONCATENATED MODULE: ./src/pages/detaledSearch/detaledSearch.pug
 /* harmony default export */ var detaledSearch = (__webpack_require__.p + "detaledSearch.html");
 // CONCATENATED MODULE: ./src/pages/cabinet/cabinet.pug
 /* harmony default export */ var cabinet = (__webpack_require__.p + "cabinet.html");
+// CONCATENATED MODULE: ./src/pages/cabinet/cabinet-with-doc.pug
+/* harmony default export */ var cabinet_with_doc = (__webpack_require__.p + "cabinet-with-doc.html");
+// CONCATENATED MODULE: ./src/pages/cabinet/profile/profile.pug
+/* harmony default export */ var profile = (__webpack_require__.p + "profile.html");
+// CONCATENATED MODULE: ./src/pages/cabinet/downloadDoc/downloadDoc.pug
+/* harmony default export */ var downloadDoc = (__webpack_require__.p + "downloadDoc.html");
+// CONCATENATED MODULE: ./src/pages/signIn/signin.pug
+/* harmony default export */ var signin = (__webpack_require__.p + "signin.html");
+// CONCATENATED MODULE: ./src/pages/signUp/signup.pug
+/* harmony default export */ var signup = (__webpack_require__.p + "signup.html");
 // CONCATENATED MODULE: ./src/index.js
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -461,4 +518,4 @@ var document_slider = __webpack_require__(31);
 
 /***/ })
 
-},[[32,1,2]]]);
+},[[33,1,2]]]);
