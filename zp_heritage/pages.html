@@ -19,19 +19,49 @@
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="signinWrap signUpWrap">
-          <h2 class="titleH2 titleH2--signintitle">Реєстрація</h2>
-          <input class="input" type="text" placeholder="Iм’я *"/>
-          <input class="input" type="email" placeholder="Электронна пошта *"/>
-          <input class="input" type="password" placeholder="Пароль *"/>
-          <input class="input" type="date" placeholder="Дата нарождення"/>
-          <input class="input" type="text" placeholder="Мiсто проживання"/>
-          <input class="input" type="tel" placeholder="Телефон"/>
-          <button class="btn" data-color="primary">Зареєструватися</button>
-          <hr/>
-          <p>є аккаунт?<a class="link link__nav">Увiйти</a></p>
-        </div>
+      <style>
+        .pages {
+          margin: 16px auto 104px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        
+        .pages ul li {
+          margin: 1rem;
+        }
+        
+        .pages ul li:before {
+          content: '•';
+          font-size: 2rem;
+        }
+        
+        .pages .link {
+          padding: 1rem;
+          font-size: 1.5rem;
+          line-height: 1.4;
+        }
+      </style>
+      <div class="pages container">
+        <h1 class="titleH1 titleH1--document">Сторінки</h1>
+        <ul>
+          <li><a class="link link__active" href="index.html">Домашня сторінка</a></li>
+          <li><a class="link link__active" href="search.html">Результат пошуку</a></li>
+          <li><a class="link link__active" href="document.html">Документ</a></li>
+          <li><a class="link link__active" href="zoomed-page-document.html">Документ (один лист)</a></li>
+          <li><a class="link link__active" href="collection.html">Колекція</a></li>
+          <li><a class="link link__active" href="collection-no-comments.html">Колекція (без коментарів)</a></li>
+          <li><a class="link link__active" href="collection-entered.html">Колекція (авторизовано користувача)</a></li>
+          <li><a class="link link__active" href="collection-entered-admin.html">Колекція (авторизовано адміна)</a></li>
+          <li><a class="link link__active" href="detaledSearch.html">Детальний пошук</a></li>
+          <li><a class="link link__active" href="cabinet.html">Особистий кабінет</a></li>
+          <li><a class="link link__active" href="cabinet-with-doc.html">Особистий кабінет (з своїми документами)</a></li>
+          <li><a class="link link__active" href="profile.html">Профіль</a></li>
+          <li><a class="link link__active" href="downloadDoc.html">Завантаження документ</a></li>
+          <li><a class="link link__active" href="signin.html">Вхід</a></li>
+          <li><a class="link link__active" href="signup.html">Реєстрація</a></li>
+          <li><a class="link link__active" href="ui.html">UI</a></li>
+        </ul>
       </div>
     </main>
     <footer class="footerWrapper">

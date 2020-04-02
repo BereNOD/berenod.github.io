@@ -475,7 +475,10 @@ var document_slider = __webpack_require__(32);
 /* harmony default export */ var signin = (__webpack_require__.p + "signin.html");
 // CONCATENATED MODULE: ./src/pages/signUp/signup.pug
 /* harmony default export */ var signup = (__webpack_require__.p + "signup.html");
+// CONCATENATED MODULE: ./src/pages.pug
+/* harmony default export */ var pages = (__webpack_require__.p + "pages.html");
 // CONCATENATED MODULE: ./src/index.js
+
 
 
 
