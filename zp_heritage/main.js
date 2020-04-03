@@ -111,7 +111,7 @@ var styles = __webpack_require__(14);
 // CONCATENATED MODULE: ./src/images/svg/clearIconRed.svg
 /* harmony default export */ var clearIconRed = (__webpack_require__.p + "svg/clearIconRed.svg?hash=a22ec87486e1dedbf9ab35c0bc85cdd9");
 // CONCATENATED MODULE: ./src/images/svg/arrowBackIcon.svg
-/* harmony default export */ var arrowBackIcon = (__webpack_require__.p + "svg/arrowBackIcon.svg?hash=4b0691f203c10ce7408ec89d56233615");
+/* harmony default export */ var arrowBackIcon = (__webpack_require__.p + "svg/arrowBackIcon.svg?hash=c21ebcfa7f326c3b06e70dba59eb13d3");
 // CONCATENATED MODULE: ./src/images/svg/arrowBackOutlined.svg
 /* harmony default export */ var arrowBackOutlined = (__webpack_require__.p + "svg/arrowBackOutlined.svg?hash=1aba85e05bebce0feaf3889326813527");
 // CONCATENATED MODULE: ./src/images/svg/arrowForwardOutlined.svg
@@ -150,7 +150,10 @@ var styles = __webpack_require__(14);
 /* harmony default export */ var zoomOpen = (__webpack_require__.p + "svg/zoomOpen.svg?hash=bdcebdaa6e58a879142450480a918956");
 // CONCATENATED MODULE: ./src/images/svg/arrowDropdownCircle.svg
 /* harmony default export */ var arrowDropdownCircle = (__webpack_require__.p + "svg/arrowDropdownCircle.svg?hash=2f3daa04099f024efe3fb463c0887be9");
+// CONCATENATED MODULE: ./src/images/svg/ok.svg
+/* harmony default export */ var ok = (__webpack_require__.p + "svg/ok.svg?hash=cb439f70df4ca1b91fb3af9dc87c5a34");
 // CONCATENATED MODULE: ./src/images/svg/index.js
+
 
 
 
@@ -262,14 +265,14 @@ var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
 
 jquery_default()(document).ready(function () {
   jquery_default()(".select2Simple").select2({
-    placeholder: "Плейсхолдер",
+    // placeholder: "Плейсхолдер",
     // allowClear: true,
     minimumResultsForSearch: -1
   });
   jquery_default()(".select2Search").select2({
-    placeholder: "Выбрать автора",
+    // placeholder: "Обрати автора",
     // allowClear: true,
-    searchInputPlaceholder: "Начните ввод"
+    searchInputPlaceholder: "Почніть вводити автора"
   });
   jquery_default()('.select2-selection__arrow b[role="presentation"]').hide();
   jquery_default()(".select2-selection__arrow").append('<img class="dropdownArrow" src="svg/arrowDownOutline.svg" alt="drop" />'); // Dropdown from search panel

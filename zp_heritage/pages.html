@@ -7,13 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="google-signin-client_id" content="731274565299-erjc766ieom83rql6hk53faijg3fkpha.apps.googleusercontent.com"/>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async="async" defer="defer"></script>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.15"/>
-    <link rel="stylesheet" href="main.css?v=1.0.15"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.16"/>
+    <link rel="stylesheet" href="main.css?v=1.0.16"/>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async="async" defer="defer" crossorigin="anonymous" src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&amp;version=v6.0"></script>
     <header class="header header--withLogo">
-      <button class="headerBurger btn ripple"><img src="svg/burger.svg" alt="Home"/></button><a class="headerBack link link__nav link__withAction" href="#"><img src="svg/arrowBackIcon.svg" alt="Back"/><span>Вернуться назад</span></a><a class="link headerLogo" href="pages.html"><img class="headerLogo__image" src="svg/logo.svg" alt="Запорiзька Спадщина" width="409" height="39"/></a>
+      <button class="headerBurger btn ripple"><img src="svg/burger.svg" alt="Home"/></button><a class="headerBack link link__nav link__withAction" href="#"><span class="link__iconWrapper"><img class="link__icon" src="svg/arrowBackIcon.svg" alt="Стрілка вліво" width="12" height="20"/></span><span>Повернутися назад</span></a><a class="link headerLogo" href="pages.html"><img class="headerLogo__image" src="svg/logo.svg" alt="Запорiзька Спадщина" width="409" height="39"/></a>
       <button class="headerSignIn btn ripple" data-color="secondary">Увійти</button>
       <div class="headerLanguages"><a class="headerLanguage btn link link__disabled ripple" href="#">ua</a><a class="headerLanguage btn link link__active ripple" href="#">ru</a>
       </div>
@@ -87,8 +91,27 @@
         </div>
       </div>
     </footer>
-    <script src="runtime.js?v=1.0.15"></script>
-    <script src="vendors.js?v=1.0.15"></script>
-    <script src="main.js?v=1.0.15"></script>
+    <script>
+      function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSuccess,
+          'onfailure': onFailure
+        });
+      }
+    </script>
+    <script src="runtime.js?v=1.0.16"></script>
+    <script src="vendors.js?v=1.0.16"></script>
+    <script src="main.js?v=1.0.16"></script>
   </body>
 </html>

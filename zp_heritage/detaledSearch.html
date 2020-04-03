@@ -7,13 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="google-signin-client_id" content="731274565299-erjc766ieom83rql6hk53faijg3fkpha.apps.googleusercontent.com"/>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async="async" defer="defer"></script>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.15"/>
-    <link rel="stylesheet" href="main.css?v=1.0.15"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.16"/>
+    <link rel="stylesheet" href="main.css?v=1.0.16"/>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async="async" defer="defer" crossorigin="anonymous" src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&amp;version=v6.0"></script>
     <header class="header header--withLogo">
-      <button class="headerBurger btn ripple"><img src="svg/burger.svg" alt="Home"/></button><a class="headerBack link link__nav link__withAction" href="#"><img src="svg/arrowBackIcon.svg" alt="Back"/><span>Вернуться назад</span></a><a class="link headerLogo" href="pages.html"><img class="headerLogo__image" src="svg/logo.svg" alt="Запорiзька Спадщина" width="409" height="39"/></a>
+      <button class="headerBurger btn ripple"><img src="svg/burger.svg" alt="Home"/></button><a class="headerBack link link__nav link__withAction" href="#"><span class="link__iconWrapper"><img class="link__icon" src="svg/arrowBackIcon.svg" alt="Стрілка вліво" width="12" height="20"/></span><span>Повернутися назад</span></a><a class="link headerLogo" href="pages.html"><img class="headerLogo__image" src="svg/logo.svg" alt="Запорiзька Спадщина" width="409" height="39"/></a>
       <button class="headerSignIn btn ripple" data-color="secondary">Увійти</button>
       <div class="headerLanguages"><a class="headerLanguage btn link link__disabled ripple" href="#">ua</a><a class="headerLanguage btn link link__active ripple" href="#">ru</a>
       </div>
@@ -26,16 +30,20 @@
               <li class="searchPanelGroupItem searchSource">
                 <button class="btn btn__onlyIcon searchBurger" data-color="default"><img src="svg/burger.svg" alt="burger"/></button>
                 <select>
-                  <option selected="selected" value="all">Все источники</option>
-                  <option value="1">Все источники</option>
-                  <option value="2">Все источники 2</option>
-                  <option value="3">Все источники 3</option>
+                  <option selected="selected" value="1">Усi джерела</option>
+                  <option value="2">Мапи та плани</option>
+                  <option value="3">Газети</option>
+                  <option value="4">Свiтлини</option>
+                  <option value="5">Бiблiофiка</option>
+                  <option value="6">Пам’ятки</option>
+                  <option value="7">Документи</option>
+                  <option value="8">Графiка</option>
                 </select>
               </li>
               <li class="searchPanelGroupItem searchInput">
-                <input placeholder="Поиск по коллекциям"/>
+                <input placeholder="Пошук по колекціях"/>
               </li>
-              <li class="searchPanelGroupItem searchLink"><span>Расширенный поиск</span></li>
+              <li class="searchPanelGroupItem searchLink"><a class="link link__active" href="detaledSearch.html">Пошук по колекціях</a></li>
               <li class="searchPanelGroupItem searchBtn">
                 <button class="btn btn__onlyIcon ripple" data-color="primary"><img src="svg/searchIcon.svg" alt="Search"/></button>
               </li>
@@ -47,8 +55,8 @@
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Авторы</h2>
-                  <select class="select2Search" style="width: 100%">
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Автори</h2>
+                  <select class="select2Search" style="width: 100%" data-placeholder="Обрати автора" data-search-input-placeholder="Почніть вводити автора">
                     <option></option>
                     <option value="1">Item 1</option>
                     <option value="2">Item 2</option>
@@ -64,7 +72,7 @@
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
                   <h2 class="titleH2-5 titleH2-5--formLabel">Рубрика</h2>
-                  <select class="select2Simple" style="width: 100%">
+                  <select class="select2Simple" style="width: 100%" data-placeholder="Обрати рубрику">
                     <option></option>
                     <option value="1">Item 1</option>
                     <option value="2">Item 2</option>
@@ -78,7 +86,7 @@
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Год</h2>
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Рiк</h2>
                   <div class="sliderWrap">
                     <div class="slider"></div>
                     <div class="slider-tooltips"></div>
@@ -88,7 +96,7 @@
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
                   <h2 class="titleH2-5 titleH2-5--formLabel">Тематика</h2>
-                  <select class="select2Simple" style="width: 100%">
+                  <select class="select2Simple" style="width: 100%" data-placeholder="Обрати тематику">
                     <option></option>
                     <option value="1">Item 1</option>
                     <option value="2">Item 2</option>
@@ -102,8 +110,8 @@
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Происхождение</h2>
-                  <select class="select2Simple" style="width: 100%">
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Походження</h2>
+                  <select class="select2Simple" style="width: 100%" data-placeholder="Обрати походження">
                     <option></option>
                     <option value="1">Item 1</option>
                     <option value="2">Item 2</option>
@@ -115,15 +123,15 @@
               </div>
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Язык документа</h2>
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Мова документа</h2>
                   <ul class="langRadioBtns">
                     <li class="langRadioBtnsItem">
-                      <label class="rdbtnContainer">Украинский
+                      <label class="rdbtnContainer">Українська
                         <input type="radio" name="radio"/><span class="rdbtnContainer-checkmark"></span>
                       </label>
                     </li>
                     <li class="langRadioBtnsItem">
-                      <label class="rdbtnContainer">Русский
+                      <label class="rdbtnContainer">Росiйська
                         <input type="radio" checked="checked" name="radio"/><span class="rdbtnContainer-checkmark"></span>
                       </label>
                     </li>
@@ -134,8 +142,8 @@
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Топонимы</h2>
-                  <select class="select2Simple" style="width: 100%">
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Топонiми</h2>
+                  <select class="select2Simple" style="width: 100%" data-placeholder="Обрати топонiми">
                     <option></option>
                     <option value="1">Item 1</option>
                     <option value="2">Item 2</option>
@@ -147,36 +155,8 @@
               </div>
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Фамилии</h2>
-                  <select class="select2Simple" style="width: 100%">
-                    <option></option>
-                    <option value="1">Item 1</option>
-                    <option value="2">Item 2</option>
-                    <option value="3">Item 3</option>
-                    <option value="4">Item 4</option>
-                    <option value="5">Item 5</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 col-12">
-                <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Место хранения</h2>
-                  <select class="select2Simple" style="width: 100%">
-                    <option></option>
-                    <option value="1">Item 1</option>
-                    <option value="2">Item 2</option>
-                    <option value="3">Item 3</option>
-                    <option value="4">Item 4</option>
-                    <option value="5">Item 5</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-6 col-12">
-                <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Ключевые слова</h2>
-                  <select class="select2Simple" style="width: 100%">
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Прiзвища</h2>
+                  <select class="select2Simple" style="width: 100%" data-placeholder="Обрати прiзвища">
                     <option></option>
                     <option value="1">Item 1</option>
                     <option value="2">Item 2</option>
@@ -190,8 +170,8 @@
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Инвентарный номер</h2>
-                  <select class="select2Simple" style="width: 100%">
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Мicце зберiгання</h2>
+                  <select class="select2Simple" style="width: 100%" data-placeholder="Обрати мicце зберiгання">
                     <option></option>
                     <option value="1">Item 1</option>
                     <option value="2">Item 2</option>
@@ -203,8 +183,36 @@
               </div>
               <div class="col-sm-6 col-12">
                 <div class="formGroup">
-                  <h2 class="titleH2-5 titleH2-5--formLabel">Архивный шифр</h2>
-                  <select class="select2Simple" style="width: 100%">
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Ключовi слова</h2>
+                  <select class="select2Simple" style="width: 100%" data-placeholder="Обрати ключовi слова">
+                    <option></option>
+                    <option value="1">Item 1</option>
+                    <option value="2">Item 2</option>
+                    <option value="3">Item 3</option>
+                    <option value="4">Item 4</option>
+                    <option value="5">Item 5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-12">
+                <div class="formGroup">
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Iнвентарний номер</h2>
+                  <select class="select2Simple" style="width: 100%" data-placeholder="Обрати iнвентарний номер">
+                    <option></option>
+                    <option value="1">Item 1</option>
+                    <option value="2">Item 2</option>
+                    <option value="3">Item 3</option>
+                    <option value="4">Item 4</option>
+                    <option value="5">Item 5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6 col-12">
+                <div class="formGroup">
+                  <h2 class="titleH2-5 titleH2-5--formLabel">Архiвний шифр</h2>
+                  <select class="select2Simple" style="width: 100%" data-placeholder="Обрати архiвний шифр">
                     <option></option>
                     <option value="1">Item 1</option>
                     <option value="2">Item 2</option>
@@ -242,8 +250,27 @@
         </div>
       </div>
     </footer>
-    <script src="runtime.js?v=1.0.15"></script>
-    <script src="vendors.js?v=1.0.15"></script>
-    <script src="main.js?v=1.0.15"></script>
+    <script>
+      function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSuccess,
+          'onfailure': onFailure
+        });
+      }
+    </script>
+    <script src="runtime.js?v=1.0.16"></script>
+    <script src="vendors.js?v=1.0.16"></script>
+    <script src="main.js?v=1.0.16"></script>
   </body>
 </html>

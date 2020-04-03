@@ -7,13 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="google-signin-client_id" content="731274565299-erjc766ieom83rql6hk53faijg3fkpha.apps.googleusercontent.com"/>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async="async" defer="defer"></script>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.15"/>
-    <link rel="stylesheet" href="main.css?v=1.0.15"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.16"/>
+    <link rel="stylesheet" href="main.css?v=1.0.16"/>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async="async" defer="defer" crossorigin="anonymous" src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&amp;version=v6.0"></script>
     <header class="header header--withLogo">
-      <button class="headerBurger btn ripple"><img src="svg/burger.svg" alt="Home"/></button><a class="headerBack link link__nav link__withAction" href="#"><img src="svg/arrowBackIcon.svg" alt="Back"/><span>Вернуться назад</span></a><a class="link headerLogo" href="pages.html"><img class="headerLogo__image" src="svg/logo.svg" alt="Запорiзька Спадщина" width="409" height="39"/></a>
+      <button class="headerBurger btn ripple"><img src="svg/burger.svg" alt="Home"/></button><a class="headerBack link link__nav link__withAction" href="#"><span class="link__iconWrapper"><img class="link__icon" src="svg/arrowBackIcon.svg" alt="Стрілка вліво" width="12" height="20"/></span><span>Повернутися назад</span></a><a class="link headerLogo" href="pages.html"><img class="headerLogo__image" src="svg/logo.svg" alt="Запорiзька Спадщина" width="409" height="39"/></a>
       <button class="headerSignIn btn ripple" data-color="secondary">Увійти</button>
       <div class="headerLanguages"><a class="headerLanguage btn link link__disabled ripple" href="#">ua</a><a class="headerLanguage btn link link__active ripple" href="#">ru</a>
       </div>
@@ -22,19 +26,19 @@
       <div class="container">
         <div class="cabinet">
           <h2 class="titleH2">Особистий кабінет</h2>
-          <div class="row">
-            <div class="col-sm-9 col-12">
+          <div class="userBlockWrapper row">
+            <div class="col-sm-8 col-12">
               <div class="userBlock">
-                <div class="avatar"><img src="https://placehold.it/333" alt="avatar"/></div>
+                <div class="avatar"><img src="https://placehold.it/333" alt="avatar" width="120" height="120"/></div>
                 <div class="descr">
-                  <h3 class="titleH3 titleH3--userBlockName">Имя пользователя
+                  <h3 class="titleH3 titleH3--userBlockName">Олена Шибун
                   </h3>
-                  <h3 class="titleH3 titleH3--userBlockDesr">support@google.com
+                  <h3 class="titleH3 titleH3--userBlockDesr">olena.shibun@ukr.net
                   </h3>
                 </div>
               </div>
             </div>
-            <div class="col-sm-3 col-12">
+            <div class="col-sm-4 col-12">
               <div class="btnGroup">
                 <button class="btn" data-color="primary">Редагувати</button>
                 <button class="btn" data-color="secondary">Вийти</button>
@@ -43,28 +47,24 @@
           </div>
           <hr/>
           <div class="myDocsBlock">
-            <div class="row">
-              <div class="col-sm-6 col-6">
-                <h2 class="titleH2">Мої документи</h2>
-              </div>
-              <div class="col-sm-6 col-6">
-                <div class="btnGroup">
-                  <button class="btn btn__dwnld" data-color="nav"><img src="svg/downloadBtn.svg" alt="Download"/>
-                    <div><span class="btn__dwnld-title">Завантажити </span><span class="btn__dwnld-descr">Cвiй документ</span></div>
-                  </button>
-                </div>
+            <div class="cabinet__myDocs">
+              <h2 class="titleH2">Мої документи</h2>
+              <div class="btnGroup">
+                <button class="btn btn__dwnld" data-color="nav"><img src="svg/downloadBtn.svg" alt="Download"/>
+                  <div><span class="btn__dwnld-title">Завантажити </span><span class="btn__dwnld-descr">Cвiй документ</span></div>
+                </button>
               </div>
             </div>
             <div class="row justify-content-between">
               <div class="col-sm-12 col-12">
                 <div class="row dwnldCard">
-                  <div class="col-sm-2 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
-                  <div class="col-sm-8 col-12">
+                  <div class="col-lg-2 col-md-3 col-sm-3 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
+                  <div class="col-lg-8 col-md-8 col-sm-9 col-12">
                     <div class="dwnlDescr">
                       <div class="check-descrWrap">
                         <h3 class="titleH3 titleH3--dwnlDescrTitle">Назва документа
                         </h3>
-                        <div class="check-descr link__active"><img class="dropdownArrow" src="svg/arrowDropdownCircle.svg" alt="drop"/>Перевiрен та додан</div>
+                        <div class="check-descr link__active"><img class="dropdownArrow" src="svg/ok.svg" alt="drop"/>Перевiрен та додан</div>
                       </div>
                       <div class="dwnlDescrBody">
                         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.Lorem Ipsum является стандартной "рыбой" для текстов на латинице</div>
@@ -88,7 +88,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-2 col-12 dwnlDetailCol">
+                  <div class="col-lg-2 col-md-1 col-sm-12 col-12 dwnlDetailCol">
                     <button class="btn dwnlDetail" data-color="primary" data-variant="outlined">Детальніше</button>
                   </div>
                 </div>
@@ -100,15 +100,15 @@
           <h3 class="titleH3 titleH3--dwnldDate">Сьогодні
           </h3>
           <div class="row dwnldCard">
-            <div class="col-sm-2 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
-            <div class="col-sm-8 col-12">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
+            <div class="col-lg-8 col-md-8 col-sm-9 col-12">
               <div class="dwnlDescr">
                 <div class="check-descrWrap">
                   <h3 class="titleH3 titleH3--dwnlDescrTitle">Назва документа
                   </h3>
                 </div>
                 <div class="dwnlDescrBody">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.Lorem Ipsum является стандартной "рыбой" для текстов на латинице</div>
+                  Lorem Ipsum - це текст- "риба", часто використовуваний у пресі та веб-дизайні.Lorem Ipsum є стандартною "рибою" для текстів на латиниці</div>
                 <div class="dwnlDescrAttrs">
                   <div class="dwnlDescrAttr">
                     <div class="dwnlDescrAttrKey">Автор:</div>
@@ -129,22 +129,22 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-2 col-12 dwnlDetailCol">
+            <div class="col-lg-2 col-md-1 col-sm-12 col-12 dwnlDetailCol">
               <button class="btn dwnlDetail" data-color="primary" data-variant="outlined">Детальніше</button>
             </div>
           </div>
           <h3 class="titleH3 titleH3--dwnldDate">Вчора
           </h3>
           <div class="row dwnldCard">
-            <div class="col-sm-2 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
-            <div class="col-sm-8 col-12">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
+            <div class="col-lg-8 col-md-8 col-sm-9 col-12">
               <div class="dwnlDescr">
                 <div class="check-descrWrap">
                   <h3 class="titleH3 titleH3--dwnlDescrTitle">Назва документа
                   </h3>
                 </div>
                 <div class="dwnlDescrBody">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.Lorem Ipsum является стандартной "рыбой" для текстов на латинице</div>
+                  Lorem Ipsum - це текст- "риба", часто використовуваний у пресі та веб-дизайні.Lorem Ipsum є стандартною "рибою" для текстів на латиниці</div>
                 <div class="dwnlDescrAttrs">
                   <div class="dwnlDescrAttr">
                     <div class="dwnlDescrAttrKey">Автор:</div>
@@ -165,20 +165,20 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-2 col-12 dwnlDetailCol">
+            <div class="col-lg-2 col-md-1 col-sm-12 col-12 dwnlDetailCol">
               <button class="btn dwnlDetail" data-color="primary" data-variant="outlined">Детальніше</button>
             </div>
           </div>
           <div class="row dwnldCard">
-            <div class="col-sm-2 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
-            <div class="col-sm-8 col-12">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
+            <div class="col-lg-8 col-md-8 col-sm-9 col-12">
               <div class="dwnlDescr">
                 <div class="check-descrWrap">
                   <h3 class="titleH3 titleH3--dwnlDescrTitle">Назва документа
                   </h3>
                 </div>
                 <div class="dwnlDescrBody">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.Lorem Ipsum является стандартной "рыбой" для текстов на латинице</div>
+                  Lorem Ipsum - це текст- "риба", часто використовуваний у пресі та веб-дизайні.Lorem Ipsum є стандартною "рибою" для текстів на латиниці</div>
                 <div class="dwnlDescrAttrs">
                   <div class="dwnlDescrAttr">
                     <div class="dwnlDescrAttrKey">Автор:</div>
@@ -199,20 +199,20 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-2 col-12 dwnlDetailCol">
+            <div class="col-lg-2 col-md-1 col-sm-12 col-12 dwnlDetailCol">
               <button class="btn dwnlDetail" data-color="primary" data-variant="outlined">Детальніше</button>
             </div>
           </div>
           <div class="row dwnldCard">
-            <div class="col-sm-2 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
-            <div class="col-sm-8 col-12">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-12"><img class="dwnldImg" src="https://placehold.it/333" alt="avatar"/></div>
+            <div class="col-lg-8 col-md-8 col-sm-9 col-12">
               <div class="dwnlDescr">
                 <div class="check-descrWrap">
                   <h3 class="titleH3 titleH3--dwnlDescrTitle">Назва документа
                   </h3>
                 </div>
                 <div class="dwnlDescrBody">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.Lorem Ipsum является стандартной "рыбой" для текстов на латинице</div>
+                  Lorem Ipsum - це текст- "риба", часто використовуваний у пресі та веб-дизайні.Lorem Ipsum є стандартною "рибою" для текстів на латиниці</div>
                 <div class="dwnlDescrAttrs">
                   <div class="dwnlDescrAttr">
                     <div class="dwnlDescrAttrKey">Автор:</div>
@@ -233,7 +233,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-2 col-12 dwnlDetailCol">
+            <div class="col-lg-2 col-md-1 col-sm-12 col-12 dwnlDetailCol">
               <button class="btn dwnlDetail" data-color="primary" data-variant="outlined">Детальніше</button>
             </div>
           </div>
@@ -263,8 +263,27 @@
         </div>
       </div>
     </footer>
-    <script src="runtime.js?v=1.0.15"></script>
-    <script src="vendors.js?v=1.0.15"></script>
-    <script src="main.js?v=1.0.15"></script>
+    <script>
+      function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSuccess,
+          'onfailure': onFailure
+        });
+      }
+    </script>
+    <script src="runtime.js?v=1.0.16"></script>
+    <script src="vendors.js?v=1.0.16"></script>
+    <script src="main.js?v=1.0.16"></script>
   </body>
 </html>
