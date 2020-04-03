@@ -10,16 +10,16 @@
     <meta name="google-signin-client_id" content="731274565299-erjc766ieom83rql6hk53faijg3fkpha.apps.googleusercontent.com"/>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async="async" defer="defer"></script>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.17"/>
-    <link rel="stylesheet" href="main.css?v=1.0.17"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.18"/>
+    <link rel="stylesheet" href="main.css?v=1.0.18"/>
   </head>
   <body>
     <div id="fb-root"></div>
     <script async="async" defer="defer" crossorigin="anonymous" src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&amp;version=v6.0"></script>
     <div class="topBannerWrapper">
           <header class="header">
-            <aside class="burgerMenuWrapper burgerMenuWrapper--opened" id="side-nav">
-              <header class="burgerMenuHeader"><a class="burgerMenuButton link link__nav link__withAction" href="#"><img class="link__icon" src="svg/clearIconRed.svg" alt="Стрілка вліво" width="24" height="24"/></a><a class="link burgerMenuLogo" href="pages.html"><img class="headerLogo__image" src="svg/logo.svg" alt="Запорiзька Спадщина" width="409" height="39"/></a></header>
+            <aside class="burgerMenuWrapper js-burgerMenuWrapper" id="side-nav">
+              <header class="burgerMenuHeader"><a class="burgerMenuButton js-burgerMenuButton__close link link__nav link__withAction" href="#"><img class="link__icon" src="svg/clearIconRed.svg" alt="Стрілка вліво" width="24" height="24"/></a><a class="link burgerMenuLogo" href="pages.html"><img class="headerLogo__image" src="svg/logo.svg" alt="Запорiзька Спадщина" width="409" height="39"/></a></header>
               <div class="burgerMenu">
                 <div class="searchPanel">
                   <ul class="searchPanelGroup">
@@ -42,7 +42,7 @@
                   </div>
                 </div>
               </footer>
-            </aside><a class="headerBurger btn ripple" href="#side-nav"><img src="svg/burger.svg" alt="Home"/></a>
+            </aside><a class="headerBurger js-headerBurger btn ripple" href="#side-nav"><img src="svg/burger.svg" alt="Home"/></a>
             <button class="headerSignIn btn ripple" data-color="secondary">Увійти</button>
             <div class="headerLanguages"><a class="headerLanguage btn link link__disabled ripple" href="#">ua</a><a class="headerLanguage btn link link__active ripple" href="#">ru</a>
             </div>
@@ -127,13 +127,20 @@
             <button class="slick-prev homeSliderItem__arrow homeSliderItem__arrow--prev"><img src="svg/prev.svg" alt="Previous"/></button>
             <button class="slick-prev homeSliderItem__arrow homeSliderItem__arrow--next"><img src="svg/next.svg" alt="Next"/></button>
             <div class="sourcesTypesInner">
-                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/mapsAndPlans.svg" alt="Мапи та плани" width="80" height="80"/></span><span class="sourceType__title">Мапи та плани</span></a></div>
-                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/newspapers.svg" alt="Газети" width="80" height="80"/></span><span class="sourceType__title">Газети</span></a></div>
-                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/photos.svg" alt="Свiтлини" width="80" height="80"/></span><span class="sourceType__title">Свiтлини</span></a></div>
-                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/library.svg" alt="Бiблiофiка" width="80" height="80"/></span><span class="sourceType__title">Бiблiофiка</span></a></div>
-                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/monuments.svg" alt="Пам'ятки" width="80" height="80"/></span><span class="sourceType__title">Пам'ятки</span></a></div>
-                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/documents.svg" alt="Документи" width="80" height="80"/></span><span class="sourceType__title">Документи</span></a></div>
-                    <div class="sourceTypeWrapper"><a class="sourceType" href="#" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/graphics.svg" alt="Графiка" width="80" height="80"/></span><span class="sourceType__title">Графiка</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/mapsAndPlans.svg" alt="Мапи та плани" width="80" height="80"/>
+                          <div class="ripple"></div></span><span class="sourceType__title">Мапи та плани</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/newspapers.svg" alt="Газети" width="80" height="80"/>
+                          <div class="ripple"></div></span><span class="sourceType__title">Газети</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/photos.svg" alt="Свiтлини" width="80" height="80"/>
+                          <div class="ripple"></div></span><span class="sourceType__title">Свiтлини</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/library.svg" alt="Бiблiофiка" width="80" height="80"/>
+                          <div class="ripple"></div></span><span class="sourceType__title">Бiблiофiка</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/monuments.svg" alt="Пам'ятки" width="80" height="80"/>
+                          <div class="ripple"></div></span><span class="sourceType__title">Пам'ятки</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/documents.svg" alt="Документи" width="80" height="80"/>
+                          <div class="ripple"></div></span><span class="sourceType__title">Документи</span></a></div>
+                    <div class="sourceTypeWrapper"><a class="sourceType" ondragstart="return false;" ondrop="return false;"><span class="sourceType__imageWrapper"><img class="sourceType__image" src="svg/graphics.svg" alt="Графiка" width="80" height="80"/>
+                          <div class="ripple"></div></span><span class="sourceType__title">Графiка</span></a></div>
             </div>
           </div>
         </div>
@@ -181,8 +188,8 @@
         });
       }
     </script>
-    <script src="runtime.js?v=1.0.17"></script>
-    <script src="vendors.js?v=1.0.17"></script>
-    <script src="main.js?v=1.0.17"></script>
+    <script src="runtime.js?v=1.0.18"></script>
+    <script src="vendors.js?v=1.0.18"></script>
+    <script src="main.js?v=1.0.18"></script>
   </body>
 </html>

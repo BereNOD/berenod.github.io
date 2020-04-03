@@ -62,11 +62,46 @@ addEventListener("click", searchFieldToggleHandler);
 /***/ 32:
 /***/ (function(module, exports) {
 
+var prevent = function prevent(e) {
+  e.preventDefault();
+  return false;
+};
 
+var searchFieldToggleHandler = function searchFieldToggleHandler(e) {
+  var panel = document.querySelector(".js-burgerMenuWrapper"); // const target = e.target.closest(".js-headerBurger");
+
+  if (panel) {
+    var backdrop = window.document.body.dataset.backdrop;
+    backdrop = backdrop ? +backdrop : 0;
+
+    if (panel.classList.contains("burgerMenuWrapper--opened")) {
+      if (!e.target.closest(".js-burgerMenuWrapper") || e.target.closest(".js-burgerMenuButton__close")) {
+        window.document.body.dataset.backdrop = backdrop - 1;
+        panel.classList.remove("burgerMenuWrapper--opened");
+        return prevent(e);
+      }
+    } else {
+      if (e.target.closest(".js-headerBurger")) {
+        window.document.body.dataset.backdrop = backdrop + 1;
+        panel.classList.add("burgerMenuWrapper--opened");
+        return prevent(e);
+      }
+    }
+  }
+};
+
+addEventListener("click", searchFieldToggleHandler);
 
 /***/ }),
 
 /***/ 33:
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -384,6 +419,9 @@ jquery_default()(document).ready(function () {
     url: "/file/post"
   });
 });
+// EXTERNAL MODULE: ./src/components/header/index.js
+var header = __webpack_require__(32);
+
 // CONCATENATED MODULE: ./src/pages/home/sourcesTypes.js
 function sourcesTypes_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -444,7 +482,7 @@ var sourcesTypes_recentReceiptsSlider = sourcesTypes_sourcesTypesSlider({
   nextButton: ".sourcesTypesWrapper .homeSliderItem__arrow--next"
 });
 // EXTERNAL MODULE: ./src/pages/document/slider.js
-var document_slider = __webpack_require__(32);
+var document_slider = __webpack_require__(33);
 
 // CONCATENATED MODULE: ./src/pages/home/playerControl.js
 
@@ -534,6 +572,7 @@ pauseBtn.on("click", function () {
 
 
 
+
 /***/ }),
 
 /***/ 7:
@@ -543,4 +582,4 @@ pauseBtn.on("click", function () {
 
 /***/ })
 
-},[[33,1,2]]]);
+},[[34,1,2]]]);
