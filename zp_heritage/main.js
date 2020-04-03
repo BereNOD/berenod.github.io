@@ -446,6 +446,24 @@ var sourcesTypes_recentReceiptsSlider = sourcesTypes_sourcesTypesSlider({
 // EXTERNAL MODULE: ./src/pages/document/slider.js
 var document_slider = __webpack_require__(32);
 
+// CONCATENATED MODULE: ./src/pages/home/playerControl.js
+
+var videoPlayerWrap = jquery_default()(".topBannerVideo");
+var videoPlayer = jquery_default()(".topBannerVideo__video");
+var playBtn = jquery_default()(".topBannerVideo__play");
+var pauseBtn = jquery_default()(".topBannerVideo__pause");
+playBtn.on("click", function () {
+  videoPlayer[0].play();
+  videoPlayerWrap.addClass("isPlayed");
+  playBtn.addClass("isHidden");
+  pauseBtn.removeClass("isHidden");
+});
+pauseBtn.on("click", function () {
+  videoPlayer[0].pause();
+  videoPlayerWrap.removeClass("isPlayed");
+  playBtn.removeClass("isHidden");
+  pauseBtn.addClass("isHidden");
+});
 // CONCATENATED MODULE: ./src/pages/home/index.pug
 /* harmony default export */ var home = (__webpack_require__.p + "index.html");
 // CONCATENATED MODULE: ./src/pages/search/search.pug
@@ -481,6 +499,7 @@ var document_slider = __webpack_require__(32);
 // CONCATENATED MODULE: ./src/pages.pug
 /* harmony default export */ var pages = (__webpack_require__.p + "pages.html");
 // CONCATENATED MODULE: ./src/index.js
+
 
 
 
