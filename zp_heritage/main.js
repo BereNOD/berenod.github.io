@@ -503,7 +503,7 @@ pauseBtn.on("click", function () {
 // CONCATENATED MODULE: ./src/pages/signUp/index.js
 
 inputmask_default()({
-  mask: "+38 (999) 999-99-99"
+  mask: "+38 999 999 99 99"
 }).mask(".js-phoneField");
 // CONCATENATED MODULE: ./src/pages/home/index.pug
 /* harmony default export */ var home = (__webpack_require__.p + "index.html");
