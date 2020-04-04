@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 11:
+/***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {(function ($) {
@@ -109,22 +109,20 @@ addEventListener("click", searchFieldToggleHandler);
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./src/fonts/index.less
-var fonts = __webpack_require__(7);
-
-// EXTERNAL MODULE: ./node_modules/owl.carousel/dist/owl.carousel.js
-var owl_carousel = __webpack_require__(8);
-
-// EXTERNAL MODULE: ./node_modules/slick-carousel/slick/slick.js
-var slick = __webpack_require__(9);
+var fonts = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/select2/dist/js/select2.js
-var select2 = __webpack_require__(10);
+var select2 = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/components/select/pluginForSelect2.js
-var pluginForSelect2 = __webpack_require__(11);
+var pluginForSelect2 = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/dropzone/dist/dropzone.js
-var dropzone = __webpack_require__(12);
+var dropzone = __webpack_require__(11);
+
+// EXTERNAL MODULE: ./node_modules/inputmask/index.js
+var inputmask = __webpack_require__(3);
+var inputmask_default = /*#__PURE__*/__webpack_require__.n(inputmask);
 
 // EXTERNAL MODULE: ./src/styles.less
 var styles = __webpack_require__(14);
@@ -381,11 +379,11 @@ jquery_default()(document).ready(function () {
 
 });
 // EXTERNAL MODULE: ./node_modules/nouislider/distribute/nouislider.js
-var nouislider = __webpack_require__(6);
+var nouislider = __webpack_require__(7);
 var nouislider_default = /*#__PURE__*/__webpack_require__.n(nouislider);
 
 // EXTERNAL MODULE: ./node_modules/wnumb/wNumb.js
-var wNumb = __webpack_require__(3);
+var wNumb = __webpack_require__(4);
 var wNumb_default = /*#__PURE__*/__webpack_require__.n(wNumb);
 
 // CONCATENATED MODULE: ./src/components/rangeSlider/slider.js
@@ -502,6 +500,11 @@ pauseBtn.on("click", function () {
   playBtn.removeClass("isHidden");
   pauseBtn.addClass("isHidden");
 });
+// CONCATENATED MODULE: ./src/pages/signUp/index.js
+
+inputmask_default()({
+  mask: "+38 (999) 999-99-99"
+}).mask(".js-phoneField");
 // CONCATENATED MODULE: ./src/pages/home/index.pug
 /* harmony default export */ var home = (__webpack_require__.p + "index.html");
 // CONCATENATED MODULE: ./src/pages/search/search.pug
@@ -537,6 +540,8 @@ pauseBtn.on("click", function () {
 // CONCATENATED MODULE: ./src/pages.pug
 /* harmony default export */ var pages = (__webpack_require__.p + "pages.html");
 // CONCATENATED MODULE: ./src/index.js
+ // import "owl.carousel";
+// import "slick-carousel";
 
 
 
@@ -575,7 +580,7 @@ pauseBtn.on("click", function () {
 
 /***/ }),
 
-/***/ 7:
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
