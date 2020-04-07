@@ -9,8 +9,8 @@
     <meta name="google-signin-client_id" content="731274565299-erjc766ieom83rql6hk53faijg3fkpha.apps.googleusercontent.com"/>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async="async" defer="defer"></script>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.22"/>
-    <link rel="stylesheet" href="main.css?v=1.0.22"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.23"/>
+    <link rel="stylesheet" href="main.css?v=1.0.23"/>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -46,17 +46,17 @@
       </div>
     </header>
     <main>
-      <div class="downloadDoc">
+      <form class="downloadDoc" action="#">
         <div class="container">
           <div class="row justify-content-between">
             <div class="col-sm-7 col-12">
               <div class="formGroup">
                 <h2 class="titleH2-5 titleH2-5--formLabel">Завантажи документ</h2>
-                <div class="dropzoneWrapper">
-                  <div class="dropzoneContainer">
-                    <div class="dropzoneDescr">
-                      <h2 class="dropzoneDescrTitle">Перетягнiть файл документа</h2><span class="dropzoneDescrSubTitle">jpg, png, doc or pdf</span><span class="dropzoneDescrSubTitle2">або</span>
-                      <button class="btn" data-color="secondary">Вибрати з компьтера</button>
+                <div class="container dropzone">
+                  <div class="row dropzoneContainer">
+                    <input class="js-dropzoneFallback" type="file" name="file" multiple="multiple"/>
+                    <div class="dropzoneDescr col-12">
+                      <h2 class="dropzoneDescrTitle">Перетягнiть файл документа</h2><span class="dropzoneDescrSubTitle">jpg, png, doc or pdf</span><span class="dropzoneDescrSubTitle2">або</span><span class="ripple btn" data-color="secondary">Вибрати з компьтера</span>
                     </div>
                   </div>
                 </div>
@@ -76,7 +76,9 @@
             <div class="col-sm-6 col-12">
               <div class="formGroup">
                                 <h2 class="titleH2-5 titleH2-5--formLabel">Назва документа</h2>
-                <input class="input" type="text" placeholder="Введiть назву документа"/>
+                <label class="input__wrapper">
+                  <input class="input" type="text" placeholder="Введiть назву документа"/>
+                </label>
               </div>
             </div>
             <div class="col-sm-6 col-12">
@@ -128,7 +130,9 @@
             <div class="col-sm-6 col-12">
               <div class="formGroup">
                                 <h2 class="titleH2-5 titleH2-5--formLabel">Рiк</h2>
-                <input class="input" type="number" placeholder="Обрати рiк"/>
+                <label class="input__wrapper">
+                  <input class="input" type="number" placeholder="Обрати рiк"/>
+                </label>
               </div>
             </div>
             <div class="col-sm-6 col-12">
@@ -293,7 +297,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </main>
     <footer class="footerWrapper">
       <div class="container footer">
@@ -337,8 +341,8 @@
         });
       }
     </script>
-    <script src="runtime.js?v=1.0.22"></script>
-    <script src="vendors.js?v=1.0.22"></script>
-    <script src="main.js?v=1.0.22"></script>
+    <script src="runtime.js?v=1.0.23"></script>
+    <script src="vendors.js?v=1.0.23"></script>
+    <script src="main.js?v=1.0.23"></script>
   </body>
 </html>

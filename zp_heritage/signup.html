@@ -9,8 +9,8 @@
     <meta name="google-signin-client_id" content="731274565299-erjc766ieom83rql6hk53faijg3fkpha.apps.googleusercontent.com"/>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async="async" defer="defer"></script>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.22"/>
-    <link rel="stylesheet" href="main.css?v=1.0.22"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.23"/>
+    <link rel="stylesheet" href="main.css?v=1.0.23"/>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -49,12 +49,26 @@
       <form class="container" action="#">
         <div class="signinWrap signUpWrap">
           <h2 class="titleH2 titleH2--signintitle">Реєстрація</h2>
-          <input class="input" type="text" placeholder="Прізвище та ім`я *"/>
-          <input class="input" type="email" placeholder="Электронна пошта *"/>
-          <input class="input" type="password" placeholder="Пароль *"/>
-          <input class="input" type="date" placeholder="Дата нарождення"/>
-          <input class="input" type="text" placeholder="Мiсто проживання"/>
-          <input class="input js-phoneField" type="tel" placeholder="Телефон"/>
+          <label class="input__wrapper">
+            <input class="input" type="text" placeholder="Прізвище та ім`я *"/>
+          </label>
+          <label class="input__wrapper input__wrapper--withError">
+            <input class="input" type="email" placeholder="Электронна пошта *"/><span class="input__errorMessage">Не вірно введена електронна пошта</span>
+          </label>
+          <label class="input__wrapper">
+            <label class="input__wrapper">
+              <input class="input" type="password" placeholder="Пароль *"/>
+            </label>
+          </label>
+          <label class="input__wrapper">
+            <input class="input" type="date" placeholder="Дата нарождення"/>
+          </label>
+          <label class="input__wrapper">
+            <input class="input" type="text" placeholder="Мiсто проживання"/>
+          </label>
+          <label class="input__wrapper">
+            <input class="input" type="text" placeholder="Плейсхолдер"/>
+          </label>
           <button class="commentForm__submit btn" data-color="primary">Зареєструватися</button>
           <hr/>
           <p>Є аккаунт?<a class="link link__nav">Увiйти</a></p>
@@ -103,8 +117,8 @@
         });
       }
     </script>
-    <script src="runtime.js?v=1.0.22"></script>
-    <script src="vendors.js?v=1.0.22"></script>
-    <script src="main.js?v=1.0.22"></script>
+    <script src="runtime.js?v=1.0.23"></script>
+    <script src="vendors.js?v=1.0.23"></script>
+    <script src="main.js?v=1.0.23"></script>
   </body>
 </html>

@@ -9,8 +9,8 @@
     <meta name="google-signin-client_id" content="731274565299-erjc766ieom83rql6hk53faijg3fkpha.apps.googleusercontent.com"/>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async="async" defer="defer"></script>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.22"/>
-    <link rel="stylesheet" href="main.css?v=1.0.22"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.23"/>
+    <link rel="stylesheet" href="main.css?v=1.0.23"/>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -59,8 +59,7 @@
                   <option value="3">Item 3</option>
                   <option value="4">Item 4</option>
                   <option value="5">Item 5</option>
-                </select><br/><br/>
-        <input class="input" placeholder="Плейсхолдер"/><br/><br/>
+                </select><br/><br/><br/><br/>
         <textarea class="textarea" placeholder="Плейсхолдер"></textarea><br/><br/>
         <div>
           <!-- BUTTONS-->
@@ -174,11 +173,11 @@
             </ul>
           </div><br/>
           <div>
-            <div class="dropzoneWrapper">
-              <div class="dropzoneContainer">
-                <div class="dropzoneDescr">
-                  <h2 class="dropzoneDescrTitle">Перетягнiть файл документа</h2><span class="dropzoneDescrSubTitle">jpg, png, doc or pdf</span><span class="dropzoneDescrSubTitle2">або</span>
-                  <button class="btn" data-color="secondary">Вибрати з компьтера</button>
+            <div class="container dropzone">
+              <div class="row dropzoneContainer">
+                <input class="js-dropzoneFallback" type="file" name="file" multiple="multiple"/>
+                <div class="dropzoneDescr col-12">
+                  <h2 class="dropzoneDescrTitle">Перетягнiть файл документа</h2><span class="dropzoneDescrSubTitle">jpg, png, doc or pdf</span><span class="dropzoneDescrSubTitle2">або</span><span class="ripple btn" data-color="secondary">Вибрати з компьтера</span>
                 </div>
               </div>
             </div>
@@ -228,8 +227,8 @@
         });
       }
     </script>
-    <script src="runtime.js?v=1.0.22"></script>
-    <script src="vendors.js?v=1.0.22"></script>
-    <script src="main.js?v=1.0.22"></script>
+    <script src="runtime.js?v=1.0.23"></script>
+    <script src="vendors.js?v=1.0.23"></script>
+    <script src="main.js?v=1.0.23"></script>
   </body>
 </html>

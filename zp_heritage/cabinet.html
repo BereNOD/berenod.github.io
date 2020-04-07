@@ -9,8 +9,8 @@
     <meta name="google-signin-client_id" content="731274565299-erjc766ieom83rql6hk53faijg3fkpha.apps.googleusercontent.com"/>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async="async" defer="defer"></script>
     <title>Запорiзька Спадщина</title>
-    <link rel="stylesheet" href="vendors.css?v=1.0.22"/>
-    <link rel="stylesheet" href="main.css?v=1.0.22"/>
+    <link rel="stylesheet" href="vendors.css?v=1.0.23"/>
+    <link rel="stylesheet" href="main.css?v=1.0.23"/>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -73,13 +73,14 @@
             <div class="col-sm-6 col-6">
               <h2 class="titleH2">Мої документи</h2>
             </div>
-            <div class="col-sm-6 col-6">
+            <form class="col-sm-6 col-6" action="#">
               <div class="btnGroup">
-                <button class="btn btn__dwnld" data-color="nav"><img src="svg/downloadBtn.svg" alt="Download"/>
+                <label class="btn btn__dwnld" data-color="nav">
+                  <input type="file" name="file" hidden="hidden"/><img src="svg/downloadBtn.svg" alt="Download"/>
                   <div><span class="btn__dwnld-title">Завантажити </span><span class="btn__dwnld-descr">Cвiй документ</span></div>
-                </button>
+                </label>
               </div>
-            </div>
+            </form>
           </div>
           <div class="row justify-content-between">
             <div class="col-sm-12 col-12">
@@ -280,8 +281,8 @@
         });
       }
     </script>
-    <script src="runtime.js?v=1.0.22"></script>
-    <script src="vendors.js?v=1.0.22"></script>
-    <script src="main.js?v=1.0.22"></script>
+    <script src="runtime.js?v=1.0.23"></script>
+    <script src="vendors.js?v=1.0.23"></script>
+    <script src="main.js?v=1.0.23"></script>
   </body>
 </html>
